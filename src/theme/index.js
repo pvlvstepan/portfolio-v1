@@ -4,6 +4,8 @@ import colors from './colors'; //color overrides
 import styles from './styles'; //global styles overrides
 import breakpoints from './breakpoints'; //breakpoints overried
 
+import Button from './components/Button';
+
 const config = {
     cssVarPrefix: 'sp',
     initialColorMode: 'dark',
@@ -16,6 +18,9 @@ const fonts = {
 };
 
 const overrides = extendTheme({
+    components: {
+        Button
+    },
     config,
     styles,
     colors,

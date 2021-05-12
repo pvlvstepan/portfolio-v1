@@ -1,4 +1,5 @@
-import { Container } from '@chakra-ui/react';
+import { Box, Container } from '@chakra-ui/react';
+import Header from './components/Header';
 
 function App() {
   return (
@@ -10,9 +11,10 @@ function App() {
         xl: '1140px',
         xxl: '1320px'
       }}>
-      <h1>Hello World!</h1>
+      <Header />
+      <Box h='100vh'></Box>
+      <Box h='100vh'></Box>
     </Container>
-
   );
 }
 
