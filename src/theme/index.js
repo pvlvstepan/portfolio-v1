@@ -10,10 +10,16 @@ const config = {
     useSystemColorMode: true
 };
 
+const fonts = {
+    body: 'Montserrat',
+    heading: 'Montserrat'
+};
+
 const overrides = extendTheme({
     config,
     styles,
     colors,
+    fonts,
     breakpoints
 });
 
