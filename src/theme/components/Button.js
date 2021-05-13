@@ -26,7 +26,7 @@ const Button = {
             borderColor: "accent",
             color: "accent",
             _hover: {
-                bg: mode(darken("light.bg", 10), lighten("dark.bg", 10))(props)
+                bg: mode(darken("light.bg", 10), darken("dark.bgLighter", 5))(props)
             }
         }),
         primary: (props) => ({

@@ -7,7 +7,7 @@ const colors = {
         bgLighter: '#FAFAFA',
         primary: '#222222',
         secondary: '#5E5E5E',
-        bgGradient: 'linear(to-r, #E5E5E5 0%, #E5E5E5 60%, #FAFAFA 60%)'
+        bgGradient: 'linear-gradient(to right, #E5E5E5 0%, #E5E5E5 60%, #FAFAFA 60%)'
     },
 
     dark: {
@@ -15,7 +15,7 @@ const colors = {
         bgLighter: '#383838',
         primary: '#FFFFFF',
         secondary: '#BBBBBB',
-        bgGradient: 'linear(to-r, #222222 0%, #222222 60%, #383838 60%)'
+        bgGradient: 'linear-gradient(to right, #222222 0%, #222222 60%, #383838 60%)'
     }
 
 };

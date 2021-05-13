@@ -1,7 +1,15 @@
-import { Box, Container } from '@chakra-ui/react';
-import Header from './components/Header';
+import { Box, Container, useColorModeValue } from '@chakra-ui/react';
+import SectionAbout from './components/SectionAbout';
+import SectionContact from './components/SectionContact';
+import SectionHome from './components/SectionHome';
+import SectionProjects from './components/SectionProjects';
+import SideNav from './components/SideNav';
+import { SectionTitle, SectionDescription, SectionParagraph } from './components/TextElements';
 
 function App() {
+
+  const bg = useColorModeValue('light.bg', 'dark.bg');
+
   return (
     <Container
       maxW={{
@@ -11,9 +19,13 @@ function App() {
         xl: '1140px',
         xxl: '1320px'
       }}>
-      <Header />
-      <Box h='100vh'></Box>
-      <Box h='100vh'></Box>
+      <Box maxW={{ xs: 'full', lg: '700', xl: '880px' }} bg={bg} p={{ xs: 3, md: 0 }}>
+        <SideNav />
+        <SectionHome />
+        <SectionProjects />
+        <SectionAbout />
+        <SectionContact />
+      </Box>
     </Container>
   );
 }
