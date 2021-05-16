@@ -4,7 +4,7 @@ import SectionContact from './components/SectionContact';
 import SectionHome from './components/SectionHome';
 import SectionProjects from './components/SectionProjects';
 import SideNav from './components/SideNav';
-import { SectionTitle, SectionDescription, SectionParagraph } from './components/TextElements';
+import 'focus-visible/dist/focus-visible';
 
 function App() {
 

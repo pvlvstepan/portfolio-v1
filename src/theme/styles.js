@@ -20,7 +20,7 @@ const styles = {
             },
             '.chakra-switch.checked .chakra-switch__track': {
                 bg: 'accent'
-            }
+            },
         }
     )
 
