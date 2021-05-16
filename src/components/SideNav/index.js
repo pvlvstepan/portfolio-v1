@@ -1,8 +1,9 @@
-import { Flex, HStack, VStack } from '@chakra-ui/layout';
+import { Box, Flex, HStack, VStack } from '@chakra-ui/layout';
 import { AiOutlineInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
 import React from 'react';
 import NavLink from './NavLink';
+import ColorModeToggle from './ColorModeToggle';
 
 const SideNav = () => {
     return (
@@ -24,12 +25,15 @@ const SideNav = () => {
                 <NavLink text='About' to='about' type='menuLink' />
                 <NavLink text='Contact' to='contact' type='menuLink' />
             </VStack>
-            <HStack spacing={6}>
-                <NavLink text={<AiOutlineInstagram />} to='https://instagram.com/glyxs_' type='socialLink' />
-                <NavLink text={<AiFillGithub />} to='https://github.com/pvlvstepan' type='socialLink' />
-                <NavLink text={<FaLinkedinIn />} to='' type='socialLink' />
-                <NavLink text={<FaTelegramPlane />} to='https://t.me/glyxs' type='socialLink' />
-            </HStack>
+            <Box>
+                <HStack spacing={6}>
+                    <NavLink text={<AiOutlineInstagram />} to='https://instagram.com/glyxs_' type='socialLink' />
+                    <NavLink text={<AiFillGithub />} to='https://github.com/pvlvstepan' type='socialLink' />
+                    <NavLink text={<FaLinkedinIn />} to='' type='socialLink' />
+                    <NavLink text={<FaTelegramPlane />} to='https://t.me/glyxs' type='socialLink' />
+                </HStack>
+                <ColorModeToggle />
+            </Box>
         </Flex>
     );
 };

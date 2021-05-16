@@ -6,7 +6,7 @@ const colors = {
         bg: '#E5E5E5',
         bgLighter: '#FAFAFA',
         primary: '#222222',
-        secondary: '#5E5E5E',
+        secondary: '#3E3E3E',
         bgGradient: 'linear-gradient(to right, #E5E5E5 0%, #E5E5E5 60%, #FAFAFA 60%)'
     },
 
