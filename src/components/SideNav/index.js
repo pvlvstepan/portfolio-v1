@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, VStack } from '@chakra-ui/layout';
+import { Flex, HStack, VStack } from '@chakra-ui/layout';
 import { AiOutlineInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
 import React from 'react';
@@ -20,12 +20,12 @@ const SideNav = () => {
             alignItems='left'
             justifyContent='space-between'>
             <NavLink text='Stepan Pavlov' to='home' type='title' />
-            <VStack spacing={3} align='left'>
+            <VStack spacing={3} align='left' my={12}>
                 <NavLink text='Projects' to='projects' type='menuLink' />
                 <NavLink text='About' to='about' type='menuLink' />
                 <NavLink text='Contact' to='contact' type='menuLink' />
             </VStack>
-            <Box>
+            <VStack spacing={12} align='left'>
                 <HStack spacing={6}>
                     <NavLink text={<AiOutlineInstagram />} to='https://instagram.com/glyxs_' type='socialLink' />
                     <NavLink text={<AiFillGithub />} to='https://github.com/pvlvstepan' type='socialLink' />
@@ -33,7 +33,7 @@ const SideNav = () => {
                     <NavLink text={<FaTelegramPlane />} to='https://t.me/glyxs' type='socialLink' />
                 </HStack>
                 <ColorModeToggle />
-            </Box>
+            </VStack>
         </Flex>
     );
 };

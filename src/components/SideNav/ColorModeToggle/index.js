@@ -1,13 +1,18 @@
-import { Button } from '@chakra-ui/button';
+import { IoSunny, IoSunnyOutline } from 'react-icons/io5';
 import { useColorMode } from '@chakra-ui/color-mode';
+import { FormControl, FormLabel } from '@chakra-ui/form-control';
+import { Switch } from '@chakra-ui/switch';
 import React from 'react';
 
 const ColorModeToggle = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     return (
-        <Button onClick={toggleColorMode}>
-            Toggle {colorMode === "light" ? "Dark" : "Light"}
-        </Button>
+        <FormControl display="flex" alignItems="center">
+            <Switch id="colorMode" onChange={toggleColorMode} size='lg' isChecked={colorMode === 'light' ? true : false} />
+            <FormLabel htmlFor="colorMode" mb="0" ml={3} fontSize='28px'>
+                {colorMode === 'light' ? <IoSunny /> : <IoSunnyOutline />}
+            </FormLabel>
+        </FormControl>
     );
 };
 
