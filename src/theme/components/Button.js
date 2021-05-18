@@ -19,7 +19,6 @@ const Button = {
             py: 4,
         },
     },
-    // Two variants: outline and solid
     variants: {
         secondary: (props) => ({
             border: "2px solid",
@@ -37,7 +36,6 @@ const Button = {
             }
         }),
     },
-    // The default size and variant values
     defaultProps: {
         size: "md",
         variant: "primary",

@@ -41,7 +41,7 @@ export const SectionParagraph = ({ text }) => {
         <Text
             textAlign='justify'
             fontWeight='medium'
-            maxW={{ xs: 'full', lg: '670' }}
+            maxW={{ xs: 'full', lg: '650', xl: '670' }}
             mb='40px'
             sx={{
                 '& span': {

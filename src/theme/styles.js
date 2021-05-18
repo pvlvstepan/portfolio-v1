@@ -22,8 +22,8 @@ const styles = {
                 bg: 'accent'
             },
             '::-webkit-scrollbar': {
-                width: '8px',
-                height: '8px'
+                width: { xs: '6px', lg: '8px' },
+                height: { xs: '6px', lg: '8px' }
             },
             '::-webkit-scrollbar-thumb': {
                 bg: 'rgba(0, 0, 0, 0.4)',
