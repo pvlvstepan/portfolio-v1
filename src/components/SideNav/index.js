@@ -1,6 +1,6 @@
 import { Flex, HStack, VStack } from '@chakra-ui/layout';
 import { AiOutlineInstagram, AiFillGithub } from 'react-icons/ai';
-import { FaLinkedinIn, FaTelegramPlane } from 'react-icons/fa';
+import { FaLinkedinIn } from 'react-icons/fa';
 import React from 'react';
 import NavLink from './NavLink';
 import ColorModeToggle from './ColorModeToggle';
@@ -30,7 +30,6 @@ const SideNav = () => {
                     <NavLink text={<AiOutlineInstagram />} to='https://instagram.com/glyxs_' type='socialLink' />
                     <NavLink text={<AiFillGithub />} to='https://github.com/pvlvstepan' type='socialLink' />
                     <NavLink text={<FaLinkedinIn />} to='' type='socialLink' />
-                    <NavLink text={<FaTelegramPlane />} to='https://t.me/glyxs' type='socialLink' />
                 </HStack>
                 <ColorModeToggle />
             </VStack>

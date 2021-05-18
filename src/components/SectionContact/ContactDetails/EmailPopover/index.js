@@ -1,4 +1,4 @@
-import { Box, Button, Link, Popover, PopoverArrow, PopoverBody, PopoverCloseButton, PopoverContent, PopoverTrigger, Stack, useClipboard, useColorModeValue } from '@chakra-ui/react';
+import { Box, Button, Flex, Link, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverTrigger, Stack, useClipboard, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import { FaClipboard, FaClipboardCheck } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
@@ -15,8 +15,10 @@ const EmailPopoever = ({ confirmCopy }) => {
     };
 
     return (
-        <Box>
-            <p>Email: </p>
+        <Flex wrap='wrap'>
+            <Box mr={3}>
+                Email:
+            </Box>
             <Popover trigger='hover' placement='bottom'>
                 <PopoverTrigger>
                     <Box width='min'>
@@ -41,7 +43,7 @@ const EmailPopoever = ({ confirmCopy }) => {
                     </PopoverBody>
                 </PopoverContent>
             </Popover>
-        </Box>
+        </Flex>
     );
 };
 

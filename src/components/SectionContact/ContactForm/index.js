@@ -38,7 +38,7 @@ const ContactForm = () => {
 
     return (
         <form autoComplete="off">
-            <VStack maxW={{ xs: 'full', lg: '650', xl: '670' }} spacing={3}>
+            <VStack maxW={{ xs: 'full', lg: '650', xl: '670' }} spacing={6}>
                 <FormControl isInvalid={errors.name && touched.name}>
                     <FormLabel mb={0} htmlFor="name">Name</FormLabel>
                     <Input

@@ -36,6 +36,9 @@ const styles = {
             '::-webkit-scrollbar-track': {
                 bg: { xs: mode('light.bg', 'dark.bg')(props), lg: mode('light.bgLighter', 'dark.bgLighter')(props) },
                 borderRadius: '0'
+            },
+            '.chakra-button__icon': {
+                fontSize: '22px'
             }
         }
     )

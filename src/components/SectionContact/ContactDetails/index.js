@@ -1,6 +1,5 @@
 import { SimpleGrid } from '@chakra-ui/layout';
 import React, { useRef } from 'react';
-import PhonePopover from './PhonePopover';
 import EmailPopover from './EmailPopover';
 import { useToast } from '@chakra-ui/toast';
 
@@ -28,7 +27,6 @@ const ContactDetails = () => {
             maxW={{ xs: 'full', lg: '650', xl: '670' }}
             gridGap={6} mb='40px' fontSize='18px' fontWeight='semibold'>
             <EmailPopover confirmCopy={confirmCopy} />
-            <PhonePopover confirmCopy={confirmCopy} />
         </SimpleGrid>
     );
 };
