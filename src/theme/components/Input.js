@@ -4,7 +4,6 @@ const Input = {
     baseStyle: {
         field: {
             fontWeight: "semibold",
-            rounded: 'xl',
             transition: '.25s ease-in-out',
             boxShadow: 'sm'
         }

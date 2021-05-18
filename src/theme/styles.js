@@ -13,7 +13,7 @@ const styles = {
                 fontSize: '16px',
                 color: mode('light.secondary', 'dark.secondary')(props)
             },
-            'section': {
+            'section:not(.chakra-popover__content)': {
                 _notFirst: { mt: { base: '0', xxl: '60px' } },
                 pt: { xs: '60px', xxl: '85px' },
                 _last: { pb: { xs: '60px', xxl: '85px' } },

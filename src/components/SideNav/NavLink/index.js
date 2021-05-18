@@ -46,6 +46,7 @@ const NavLink = ({ text, to, type, offset }) => {
     return (
         <Link
             href={to}
+            rounded='xl'
             isExternal={type === 'socialLink' ? true : false}
             fontSize={type !== 'menuLink' ? type !== 'socialLink' ? { xs: '24px', xxl: '28px' } : '28px' : '22px'}
             color={type === 'title' ? 'accent' : ''}

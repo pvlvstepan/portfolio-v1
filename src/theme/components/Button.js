@@ -2,6 +2,7 @@ import { mode, darken, lighten } from '@chakra-ui/theme-tools';
 
 const Button = {
     baseStyle: {
+        textDecoration: 'none !important',
         fontWeight: "bold",
         textTransform: "uppercase",
         rounded: 'xl',
@@ -34,7 +35,7 @@ const Button = {
             _hover: {
                 bg: mode(darken("accent", 10), lighten("accent", 10))(props)
             }
-        }),
+        })
     },
     defaultProps: {
         size: "md",

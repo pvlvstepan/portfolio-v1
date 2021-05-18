@@ -37,11 +37,12 @@ const ContactForm = () => {
     }, [name, email, message]);
 
     return (
-        <form autocomplete="off">
+        <form autoComplete="off">
             <VStack maxW={{ xs: 'full', lg: '650', xl: '670' }} spacing={3}>
                 <FormControl isInvalid={errors.name && touched.name}>
                     <FormLabel mb={0} htmlFor="name">Name</FormLabel>
                     <Input
+                        rounded='xl'
                         type='name'
                         id='name'
                         onChange={e => setName(e.target.value)} />
@@ -50,6 +51,7 @@ const ContactForm = () => {
                 <FormControl isInvalid={errors.email && touched.email} >
                     <FormLabel mb={0} htmlFor="email">Email</FormLabel>
                     <Input
+                        rounded='xl'
                         transition='.25s ease-in-out'
                         type='email'
                         id='email'
@@ -59,6 +61,7 @@ const ContactForm = () => {
                 <FormControl isInvalid={errors.message && touched.message} >
                     <FormLabel mb={0} htmlFor="message">Message</FormLabel>
                     <Textarea
+                        borderRadius='xl'
                         resize='none'
                         height='150px'
                         transition='.25s ease-in-out'
