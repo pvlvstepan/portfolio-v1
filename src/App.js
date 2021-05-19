@@ -5,6 +5,7 @@ import SectionHome from './components/SectionHome';
 import SectionProjects from './components/SectionProjects';
 import SideNav from './components/SideNav';
 import 'focus-visible/dist/focus-visible';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <SectionProjects />
         <SectionAbout />
         <SectionContact />
+        <Footer />
       </Box>
     </Container>
   );

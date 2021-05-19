@@ -3,10 +3,11 @@ import React from 'react';
 import { FaClipboard, FaClipboardCheck } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
 import PopoverLink from '../PopoverLink';
+import { email } from './../../../../data/contactDetails';
 
 const EmailPopoever = ({ confirmCopy }) => {
 
-    const { hasCopied, onCopy } = useClipboard('pvlv.stepan@gmail.com');
+    const { hasCopied, onCopy } = useClipboard(email);
     const bg = useColorModeValue('light.bgLighter', 'dark.bgLighter');
 
     const handleCopy = () => {
@@ -22,7 +23,7 @@ const EmailPopoever = ({ confirmCopy }) => {
             <Popover trigger='hover' placement='bottom'>
                 <PopoverTrigger>
                     <Box width='min'>
-                        <PopoverLink text='pvlv.stepan@gmail.com' />
+                        <PopoverLink text={email} />
                     </Box>
                 </PopoverTrigger>
                 <PopoverContent rounded='2xl' width='min' bg={bg}>
@@ -36,7 +37,7 @@ const EmailPopoever = ({ confirmCopy }) => {
                             leftIcon={hasCopied ? <FaClipboardCheck /> : <FaClipboard />}>Copy</Button>
                         <Button as={Link}
                             size='sm'
-                            href='mailto:pvlv.stepan@gmail.com'
+                            href={'mailto:' + email}
                             variant='solid'
                             aria-label='Contact via internal app'
                             leftIcon={<IoIosMail />}>Contact</Button>

@@ -4,6 +4,7 @@ import { FaLinkedinIn } from 'react-icons/fa';
 import React from 'react';
 import NavLink from './NavLink';
 import ColorModeToggle from './ColorModeToggle';
+import { github, instagram, linkedIn } from './../../data/contactDetails';
 
 const SideNav = () => {
     return (
@@ -27,9 +28,9 @@ const SideNav = () => {
             </VStack>
             <VStack spacing={12} align='left'>
                 <HStack spacing={6}>
-                    <NavLink text={<AiOutlineInstagram />} to='https://instagram.com/glyxs_' type='socialLink' />
-                    <NavLink text={<AiFillGithub />} to='https://github.com/pvlvstepan' type='socialLink' />
-                    <NavLink text={<FaLinkedinIn />} to='' type='socialLink' />
+                    <NavLink text={<AiOutlineInstagram />} to={instagram} type='socialLink' />
+                    <NavLink text={<AiFillGithub />} to={github} type='socialLink' />
+                    <NavLink text={<FaLinkedinIn />} to={linkedIn} type='socialLink' />
                 </HStack>
                 <ColorModeToggle />
             </VStack>
