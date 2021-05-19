@@ -3,6 +3,7 @@ import { Box } from '@chakra-ui/layout';
 import React from 'react';
 import { ParagraphLink, SectionDescription, SectionParagraph, SectionTitle } from '../TextElements';
 import imgAbout from './../../data/img/imgAbout.jpg';
+import {CVLink} from './../../data/contactDetails';
 import TechStack from './TechStack';
 
 const SectionAbout = () => {
@@ -33,6 +34,9 @@ const SectionAbout = () => {
             />
             <SectionDescription text="Some of the technologies I've worked with" />
             <TechStack />
+            <Box mt='60px' fontSize='18px'>
+                <ParagraphLink text='View & Download My CV' to={CVLink}/>
+            </Box>
         </Box >
     );
 };
