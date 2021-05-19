@@ -6,7 +6,7 @@ import ContactForm from './ContactForm';
 
 const SectionContact = () => {
     return (
-        <Box as='section' className='section' id='contact'>
+        <Box as='section' className='section' id='contact' maxW={{ xs: 'full', lg: '650', xl: '670' }}>
             <SectionTitle text='Contact' />
             <SectionDescription text="Have a matter to discuss? Feel free to get in touch!" />
             <ContactDetails />

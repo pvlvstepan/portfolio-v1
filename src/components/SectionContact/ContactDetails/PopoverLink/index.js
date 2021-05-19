@@ -4,6 +4,7 @@ import React from 'react';
 const PopoverLink = ({ text }) => {
     return (
         <Link
+            tabIndex={0}
             fontWeight='semibold'
             color='accent'
             textDecor='none !important'
