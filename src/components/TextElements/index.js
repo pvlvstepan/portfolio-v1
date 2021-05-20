@@ -25,9 +25,9 @@ export const SectionDescription = ({ text }) => {
             as='h2'
             fontWeight='medium'
             maxW={{ xs: 'full', sm: '400' }}
-            fontSize='22px'
+            fontSize={{ xs: '18px', sm: '22px' }}
             lineHeight='1.65'
-            mt='60px'
+            mt={{ sm: '60px' }}
             mb='40px'>
             {text}
         </Heading>

@@ -20,7 +20,7 @@ function App() {
         xl: '1140px',
         xxl: '1320px'
       }}>
-      <Box maxW={{ xs: 'full', lg: '700', xl: '880px' }} bg={bg} p={{ xs: 3, md: 0 }}>
+      <Box maxW={{ xs: 'full', lg: '700', xl: '880px' }} bg={bg}>
         <SideNav />
         <SectionHome />
         <SectionProjects />
