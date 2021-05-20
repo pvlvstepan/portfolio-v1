@@ -1,11 +1,11 @@
 import { Box } from '@chakra-ui/layout';
 import React from 'react';
-import Logo from '../../data/img/Logo';
+import LogoLink from './LogoLink';
 
 const SectionHome = () => {
     return (
         <Box as='section' className='section' h='100vh' id='home' display='flex'>
-            <Logo />
+            <LogoLink />
         </Box>
     );
 };
