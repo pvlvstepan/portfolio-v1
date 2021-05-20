@@ -7,15 +7,19 @@ const LogoLink = () => {
 
     return (
         <Link
-            pos='absolute'
+            left={{ xs: '16px', lg: 'initial' }}
+            px='8px'
+            pos={{ xs: 'fixed', lg: 'absolute' }}
+            top={{ xs: '24px', lg: '60px', xxl: '85px' }}
             as={ScrollLink}
+            zIndex='sticky'
             href='home'
             to='home'
             smooth={true}
             spy={false}
-            duration={1500}>
+            duration={1500} >
             <Logo />
-        </Link>
+        </Link >
     );
 };
 

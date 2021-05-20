@@ -13,6 +13,9 @@ const styles = {
                 fontSize: '16px',
                 color: mode('light.secondary', 'dark.secondary')(props)
             },
+            '.no-scroll': {
+                overflow: 'hidden',
+            },
             'section:not(.chakra-popover__content)': {
                 _notFirst: { mt: { base: '0', xxl: '60px' } },
                 pt: { xs: '60px', xxl: '85px' },
