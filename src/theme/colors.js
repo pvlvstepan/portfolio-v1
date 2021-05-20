@@ -1,8 +1,7 @@
 const colors = {
 
-    accent: '#3A86FF',
-
     light: {
+        accent: '#0A68FF',
         bg: '#E5E5E5',
         bgLighter: '#FAFAFA',
         primary: '#222222',
@@ -11,6 +10,7 @@ const colors = {
     },
 
     dark: {
+        accent: '#3A86FF',
         bg: '#222222',
         bgLighter: '#383838',
         primary: '#FFFFFF',

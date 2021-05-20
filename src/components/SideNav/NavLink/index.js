@@ -1,8 +1,11 @@
+import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Link } from '@chakra-ui/layout';
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
 const NavLink = ({ text, to, type, offset }) => {
+
+    const accent = useColorModeValue('light.accent', 'dark.accent');
 
     let scrollLinkProps = {};
 
@@ -25,12 +28,12 @@ const NavLink = ({ text, to, type, offset }) => {
                 bottom: '2px',
                 width: '0',
                 left: '0',
-                bg: 'accent',
+                bg: accent,
                 borderRaduis: '1px'
             },
             sx: {
                 '&.active': {
-                    color: 'accent'
+                    color: accent
                 },
                 '&.active:after': {
                     width: '100%',
@@ -55,7 +58,7 @@ const NavLink = ({ text, to, type, offset }) => {
             transition='.25s ease-in-out'
             width='min'
             _hover={{
-                color: 'accent'
+                color: accent
             }}
             {...scrollLinkProps}>
             {text}

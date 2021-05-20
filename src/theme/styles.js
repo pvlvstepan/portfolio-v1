@@ -19,7 +19,7 @@ const styles = {
                 _last: { pb: { xs: '60px', xxl: '85px' } },
             },
             '.chakra-switch.checked .chakra-switch__track': {
-                bg: 'accent'
+                bg: mode('light.accent', 'dark.accent')(props)
             },
             '::-webkit-scrollbar': {
                 width: { xs: '6px', lg: '8px' },

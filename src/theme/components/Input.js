@@ -14,13 +14,13 @@ const Input = {
                 border: "2px solid",
                 bg: mode("light.bgLighter", "dark.bgLighter")(props),
                 borderColor: mode("light.bgLighter", "dark.bgLighter")(props),
-                color: 'accent',
+                color: mode('light.accent', 'dark.accent')(props),
                 _hover: {
-                    borderColor: 'accent',
+                    borderColor: mode('light.accent', 'dark.accent')(props),
                     bg: mode("light.bgLighter", "dark.bgLighter")(props)
                 },
                 _focus: {
-                    borderColor: 'accent'
+                    borderColor: mode('light.accent', 'dark.accent')(props)
                 }
             }
         }),

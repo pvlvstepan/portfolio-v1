@@ -23,17 +23,17 @@ const Button = {
     variants: {
         secondary: (props) => ({
             border: "2px solid",
-            borderColor: "accent",
-            color: "accent",
+            borderColor: mode('light.accent', 'dark.accent')(props),
+            color: mode('light.accent', 'dark.accent')(props),
             _hover: {
                 bg: mode(darken("light.bg", 10), darken("dark.bgLighter", 5))(props)
             }
         }),
         primary: (props) => ({
-            bg: "accent",
+            bg: mode('light.accent', 'dark.accent')(props),
             color: "dark.primary",
             _hover: {
-                bg: mode(darken("accent", 10), lighten("accent", 10))(props)
+                bg: mode(darken('light.accent', 10), lighten('dark.accent', 10))(props)
             }
         })
     },

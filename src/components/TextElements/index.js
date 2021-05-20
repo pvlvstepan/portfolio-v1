@@ -55,19 +55,22 @@ export const SectionParagraph = ({ text }) => {
 };
 
 export const ParagraphLink = ({ text, to }) => {
+
+    const accent = useColorModeValue('light.accent', 'dark.accent');
+
     return (
         <Link
             isExternal={true}
             href={to}
             fontWeight='semibold'
-            color='accent'
+            color={accent}
             textDecor='none !important'
             pb='3px'
             borderBottom='2px solid'
             borderColor='rgba(58, 134, 255, 0.5)'
             transition='.25s ease-in-out'
             _hover={{
-                borderColor: 'accent'
+                borderColor: accent
             }}>
             {text}
         </Link>
