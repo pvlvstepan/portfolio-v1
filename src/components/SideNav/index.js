@@ -1,3 +1,4 @@
+import useScrollDirection from '../../hooks/useScrollDirection';
 import { Flex, HStack, VStack, useColorModeValue, useOutsideClick, Box } from '@chakra-ui/react';
 import { AiOutlineInstagram, AiFillGithub } from 'react-icons/ai';
 import { FaLinkedinIn } from 'react-icons/fa';
@@ -12,10 +13,10 @@ import NavOverlay from './NavOverlay';
 const SideNav = () => {
 
     const bg = useColorModeValue('light.bgLighter', 'dark.bgLighter');
-
     const [navIsOpen, setNavIsOpen] = useState(false);
-
+    const [scrolledToTop, setScrolledToTop] = useState(true);
     const burgerRef = useRef();
+    const scrollDirection = useScrollDirection('down');
 
     useEffect(() => {
         if (navIsOpen === true) {
@@ -25,11 +26,22 @@ const SideNav = () => {
         }
     }, [navIsOpen]);
 
-
     useOutsideClick({
         ref: burgerRef,
         handler: () => setNavIsOpen(false)
     });
+
+    const handleScroll = () => {
+        setScrolledToTop(window.pageYOffset < 50);
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <Box>
@@ -70,14 +82,27 @@ const SideNav = () => {
                     <ColorModeToggle />
                 </VStack>
             </Flex>
-            <LogoLink />
+            <Box
+                pos='fixed'
+                h='72px'
+                w='100%'
+                left={0}
+                r={0}
+                transition='.25s ease-in-out'
+                bg={{ xs: navIsOpen || scrolledToTop ? 'none' : bg, lg: 'none' }}
+                top={(scrollDirection === 'up' && !scrolledToTop && !navIsOpen) ? '0' : '-72px'}
+                zIndex='sticky'
+                boxShadow={{ xs: navIsOpen || scrolledToTop ? 'none' : 'lg', lg: 'none' }}>
+            </Box>
+            <LogoLink scrollDirection={scrollDirection} navIsOpen={navIsOpen} scrolledToTop={scrolledToTop} />
             <Box
                 overflowY=''
                 visibility={{ lg: 'hidden' }}
                 pos='fixed'
-                right='16px'
-                top='24px'
                 zIndex='sticky'
+                right='16px'
+                top={(scrollDirection === 'up' && !scrolledToTop) ? '12px' : navIsOpen || scrolledToTop ? '24px' : '-60px'}
+                transition='top .25s ease-in-out'
                 ref={burgerRef}>
                 <Hamburger duration={0.25} rounded={true} toggled={navIsOpen} toggle={setNavIsOpen} />
             </Box>

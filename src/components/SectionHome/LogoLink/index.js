@@ -3,14 +3,19 @@ import { Link as ScrollLink } from 'react-scroll';
 import { Link } from '@chakra-ui/layout';
 import Logo from '../../../data/img/Logo';
 
-const LogoLink = () => {
+const LogoLink = ({ scrollDirection, navIsOpen, scrolledToTop }) => {
 
     return (
         <Link
             left={{ xs: '16px', lg: 'initial' }}
             px='8px'
             pos={{ xs: 'fixed', lg: 'absolute' }}
-            top={{ xs: '24px', lg: '60px', xxl: '85px' }}
+            transition='top .25s ease-in-out'
+            top={{
+                xs: (scrollDirection === 'up' && !scrolledToTop) ? '12px' : navIsOpen || scrolledToTop ? '24px' : '-60px',
+                lg: '60px',
+                xxl: '85px'
+            }}
             as={ScrollLink}
             zIndex='sticky'
             href='home'
