@@ -5,13 +5,13 @@ const NavOverlay = ({ visibility }) => {
 
     return (
         <Box
-            h='100vh'
-            w='100vw'
+            h='100%'
+            w='100%'
             pos='fixed'
             top={0}
             left={0}
             zIndex='docked'
-            bg='blackAlpha.300'
+            bg='blackAlpha.400'
             sx={{
                 backdropFilter: 'blur(2px)',
                 WebkitBackdropFilter: 'blur(2px)'

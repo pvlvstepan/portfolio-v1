@@ -38,7 +38,7 @@ const SideNav = () => {
                 as='aside'
                 position='fixed'
                 right={{ xs: navIsOpen ? 0 : '-100%', lg: '0' }} top={0} left='auto'
-                h='100vh'
+                h={{ xs: '100%', lg: '100vh' }}
                 zIndex='sticky'
                 maxW={{ xs: '240px', lg: '40%' }}
                 width='100%'

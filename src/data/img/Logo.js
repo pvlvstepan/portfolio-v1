@@ -3,8 +3,8 @@ import { useColorModeValue } from '@chakra-ui/color-mode';
 
 const Logo = () => {
 
-    const color = useColorModeValue('var(--sp-colors-light-secondary)', 'var(--sp-colors-dark-secondary)');
-    const bg = useColorModeValue('var(--sp-colors-light-bgLighter)', 'var(--sp-colors-dark-bgLighter)');
+    const bg = useColorModeValue('var(--sp-colors-light-secondary)', 'var(--sp-colors-dark-secondary)');
+    const color = useColorModeValue('var(--sp-colors-light-bgLighter)', 'var(--sp-colors-dark-bgLighter)');
 
     return (
         <svg width="48" height="48" viewBox="0 0 1148 1148" fill="none" xmlns="http://www.w3.org/2000/svg">
