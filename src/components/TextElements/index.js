@@ -10,7 +10,7 @@ export const SectionTitle = ({ text }) => {
         <Heading
             as='h1'
             color={color}
-            fontWeight='semibold'
+            fontWeight='bold'
             fontSize='28px'
             lineHeight='150%'
             mb='40px'>
@@ -23,7 +23,7 @@ export const SectionDescription = ({ text }) => {
     return (
         <Heading
             as='h2'
-            fontWeight='medium'
+            fontWeight='semibold'
             maxW={{ xs: 'full', sm: '400' }}
             fontSize={{ xs: '18px', sm: '22px' }}
             lineHeight='1.65'

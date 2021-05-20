@@ -7,6 +7,7 @@ import breakpoints from './breakpoints'; //breakpoints overried
 import Button from './components/Button';
 import Input from './components/Input';
 import Textarea from './components/Textarea';
+import Badge from './components/Badge';
 
 const config = {
     cssVarPrefix: 'sp',
@@ -21,6 +22,7 @@ const fonts = {
 
 const overrides = extendTheme({
     components: {
+        Badge,
         Button,
         Input,
         Textarea
