@@ -12,7 +12,7 @@ const Project = ({ data }) => {
 
     return (
         <VStack maxW={{ xs: 'full', lg: '650', xl: '670' }} align='left' spacing='20px'>
-            <Image src={data.img} />
+            <Image src={data.img} alt={data.title} />
             <Box>
                 <Text fontSize='16px' fontWeight='semibold' color={accent}>Featured Project</Text>
                 <Heading as='h3' fontSize='22px' fontWeight='semibold' color={primary}>{data.title}</Heading>

@@ -7,6 +7,7 @@ const LogoLink = ({ scrollDirection, navIsOpen, scrolledToTop }) => {
 
     return (
         <Link
+            aria-label='Go to home'
             left={{ xs: '16px', lg: 'initial' }}
             px='8px'
             pos={{ xs: 'fixed', lg: 'absolute' }}

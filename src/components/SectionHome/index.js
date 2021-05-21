@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Link, Text, useColorModeValue, Wrap } from '@chakra-ui/react';
+import { Box, Button, Heading, Link, Text, useColorModeValue, Wrap, WrapItem } from '@chakra-ui/react';
 import { CVLink } from '../../data/contactDetails';
 import { Link as ScrollLink } from 'react-scroll';
 import React from 'react';
@@ -20,19 +20,23 @@ const SectionHome = () => {
                     I'm a Russian Software Developer based in Kuala Lumpur, Malaysia passionate about building and designing high-quality websites and applications.
                 </Text>
                 <Wrap maxW={{ xs: '400px', sm: '200px' }} spacing={6}>
-                    <Button
-                        w='full'
-                        as={ScrollLink}
-                        spy={false}
-                        href='projects'
-                        to='projects'
-                        smooth={true}
-                        duration={1500}>
-                        View My Projects
+                    <WrapItem w='full'>
+                        <Button
+                            w='full'
+                            as={ScrollLink}
+                            spy={false}
+                            href='projects'
+                            to='projects'
+                            smooth={true}
+                            duration={1500}>
+                            View My Projects
                     </Button>
-                    <Button as={Link} href={CVLink} isExternal={true} variant='secondary' w='full'>
-                        Download My CV
+                    </WrapItem>
+                    <WrapItem w='full'>
+                        <Button as={Link} href={CVLink} isExternal={true} variant='secondary' w='full'>
+                            Download My CV
                     </Button>
+                    </WrapItem>
                 </Wrap>
             </Box>
         </Box>

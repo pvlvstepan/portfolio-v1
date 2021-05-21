@@ -14,7 +14,7 @@ const ColorModeToggle = () => {
                 size='lg'
                 isChecked={colorMode === 'light' ? true : false}
                 className={colorMode === 'light' ? 'checked' : ''} />
-            <FormLabel htmlFor="colorMode" mb="0" ml={3} fontSize='28px'>
+            <FormLabel htmlFor="colorMode" mb="0" ml={3} fontSize='28px' aria-label='Toggle Color Mode'>
                 {colorMode === 'light' ? <IoSunny /> : <IoSunnyOutline />}
             </FormLabel>
         </FormControl>
