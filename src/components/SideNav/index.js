@@ -104,7 +104,7 @@ const SideNav = () => {
                 top={(scrollDirection === 'up' && !scrolledToTop) ? '12px' : navIsOpen || scrolledToTop ? '24px' : '-60px'}
                 transition='top .25s ease-in-out'
                 ref={burgerRef}>
-                <Hamburger duration={0.25} rounded={true} toggled={navIsOpen} toggle={setNavIsOpen} />
+                <Hamburger label="Show menu" duration={0.25} rounded={true} toggled={navIsOpen} toggle={setNavIsOpen} />
             </Box>
         </Box>
     );
