@@ -1,5 +1,5 @@
 import { Image } from '@chakra-ui/image';
-import { Box } from '@chakra-ui/layout';
+import { AspectRatio, Box } from '@chakra-ui/layout';
 import React from 'react';
 import { ParagraphLink, SectionDescription, SectionParagraph, SectionTitle } from '../TextElements';
 import imgAbout from './../../data/img/imgAbout.jpg';
@@ -16,7 +16,9 @@ const SectionAbout = () => {
                 <>I'm currently a student at <ParagraphLink text='Asia Pacific University of Technology and Innovation' to='https://new.apu.edu.my/about-apu' /> pursuing <span>Software Engineering Diploma</span> at my second year. I prefer to keep learning, continue challenging myself, and do interesting things that matter.</>
             } 
             />
-            <Image src={imgAbout} rounded='2xl' mb='40px' alt='Stepan Pavlov'/>
+            <AspectRatio ratio={16/9} mb='40px'>
+                <Image src={imgAbout} rounded='2xl'  alt='Stepan Pavlov' w='500px' h='500px'/>
+            </AspectRatio>
             <SectionParagraph text=
             {
                 <>Fueled by enthusiasm, I really enjoy and more than willing to bridge the gap beetween back-end and front-end developement - combining my technical knowledge with my keen eye for design to create a <span>beautiful product</span>. My passion drives me in the pursuit of many interests and areas of study. I'd like to <span>develop expertise in a number of software engineering fields</span>, with huge intersest towards mobile and web development.</>
