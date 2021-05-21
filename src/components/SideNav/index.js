@@ -7,7 +7,7 @@ import NavLink from './NavLink';
 import ColorModeToggle from './ColorModeToggle';
 import { github, instagram, linkedIn } from './../../data/contactDetails';
 import { Squash as Hamburger } from 'hamburger-react';
-import LogoLink from '../SectionHome/LogoLink';
+import LogoLink from './LogoLink';
 import NavOverlay from './NavOverlay';
 
 const SideNav = () => {
