@@ -42,7 +42,7 @@ const Project = ({ data }) => {
                 variants={slideFade}
                 initial='hidden'
                 animate={textAnimation}>
-                <Box rounded='2xl' bg={bg} p={6}>
+                <Box rounded='2xl' bg={bg} p={6} boxShadow='md'>
                     <Text fontSize='16px' align='justify'>
                         {data.description}
                     </Text>

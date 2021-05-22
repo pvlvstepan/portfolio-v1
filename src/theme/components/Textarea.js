@@ -5,7 +5,7 @@ const Textarea = {
         fontWeight: "semibold",
         rounded: 'xl',
         transition: '.25s ease-in-out',
-        boxShadow: 'sm'
+        boxShadow: 'md'
     },
     variants: {
         filled: (props) => ({

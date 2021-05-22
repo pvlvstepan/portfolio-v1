@@ -5,7 +5,7 @@ const Input = {
         field: {
             fontWeight: "semibold",
             transition: '.25s ease-in-out',
-            boxShadow: 'sm'
+            boxShadow: 'md'
         }
     },
     variants: {
