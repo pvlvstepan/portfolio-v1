@@ -19,7 +19,7 @@ const SectionHome = () => {
                 <Text fontWeight='medium' fontSize='18px' lineHeight='150%' maxW='400px' mb='40px'>
                     I'm a Russian Software Developer based in Kuala Lumpur, Malaysia passionate about building and designing high-quality websites and applications.
                 </Text>
-                <Wrap maxW={{ xs: '400px', sm: '200px' }} spacing={6}>
+                <Wrap maxW='200px' spacing={6}>
                     <WrapItem w='full'>
                         <Button
                             w='full'
