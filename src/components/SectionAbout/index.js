@@ -5,8 +5,15 @@ import { ParagraphLink, SectionDescription, SectionParagraph, SectionTitle } fro
 import imgAbout from './../../data/img/imgAbout.jpg';
 import {CVLink} from './../../data/contactDetails';
 import TechStack from './TechStack';
+import useSlideFadeOnView from '../../hooks/useSlideFadeOnView';
+import { slideFade } from '../../animations';
+import { motion } from 'framer-motion';
 
 const SectionAbout = () => {
+
+    const [imageRef, imageAnimation] = useSlideFadeOnView();
+    const [linkRef, linkAnimation] = useSlideFadeOnView();
+
     return (
         <Box as='section' className='section' id='about' maxW={{ xs: 'full', lg: '650', xl: '670' }}>
             <SectionTitle text='About Me' />
@@ -16,9 +23,15 @@ const SectionAbout = () => {
                 <>I'm currently a student at <ParagraphLink text='Asia Pacific University of Technology and Innovation' to='https://new.apu.edu.my/about-apu' /> pursuing <span>Software Engineering Diploma</span> at my second year. I prefer to keep learning, continue challenging myself, and do interesting things that matter.</>
             } 
             />
-            <AspectRatio ratio={16/9} mb='40px'>
-                <Image src={imgAbout} rounded='2xl'  alt='Stepan Pavlov' w='500px' h='500px'/>
-            </AspectRatio>
+            <motion.div
+                ref={imageRef}
+                variants={slideFade}
+                initial='hidden'
+                animate={imageAnimation}>
+                <AspectRatio ratio={16/9} mb='40px'>
+                    <Image src={imgAbout} rounded='2xl'  alt='Stepan Pavlov' w='500px' h='500px'/>
+                </AspectRatio>
+            </motion.div>
             <SectionParagraph text=
             {
                 <>Fueled by enthusiasm, I really enjoy and more than willing to bridge the gap beetween back-end and front-end developement - combining my technical knowledge with my keen eye for design to create a <span>beautiful product</span>. My passion drives me in the pursuit of many interests and areas of study. I'd like to <span>develop expertise in a number of software engineering fields</span>, with huge intersest towards mobile and web development.</>
@@ -36,9 +49,15 @@ const SectionAbout = () => {
             />
             <SectionDescription text="Some of the technologies I've worked with" />
             <TechStack />
-            <Box mt='60px' fontSize='18px'>
-                <ParagraphLink text='View & Download My CV' to={CVLink}/>
-            </Box>
+            <motion.div
+                ref={linkRef}
+                variants={slideFade}
+                initial='hidden'
+                animate={linkAnimation}>
+                <Box mt='60px' fontSize='18px'>
+                    <ParagraphLink text='View & Download My CV' to={CVLink}/>
+                </Box>
+            </motion.div>
         </Box >
     );
 };
