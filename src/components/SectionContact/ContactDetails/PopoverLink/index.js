@@ -1,30 +1,40 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Link } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
 import React from 'react';
+import { slideFade } from '../../../../animations';
+import useSlideFadeOnView from '../../../../hooks/useSlideFadeOnView';
 
 const PopoverLink = ({ text }) => {
 
     const accent = useColorModeValue('light.accent', 'dark.accent');
+    const [linkRef, linkAnimation] = useSlideFadeOnView();
 
     return (
-        <Link
-            tabIndex={0}
-            fontWeight='semibold'
-            color={accent}
-            textDecor='none !important'
-            lineHeight='1'
-            height='min'
-            pb='3px'
-            width='min'
-            borderBottom='2px solid'
-            whiteSpace='nowrap'
-            borderColor='rgba(58, 134, 255, 0.5)'
-            transition='.25s ease-in-out'
-            _hover={{
-                borderColor: accent
-            }}>
-            {text}
-        </Link>
+        <motion.div
+            ref={linkRef}
+            variants={slideFade}
+            initial='hidden'
+            animate={linkAnimation}>
+            <Link
+                tabIndex={0}
+                fontWeight='semibold'
+                color={accent}
+                textDecor='none !important'
+                lineHeight='1'
+                height='min'
+                pb='3px'
+                width='min'
+                borderBottom='2px solid'
+                whiteSpace='nowrap'
+                borderColor='rgba(58, 134, 255, 0.5)'
+                transition='.25s ease-in-out'
+                _hover={{
+                    borderColor: accent
+                }}>
+                {text}
+            </Link>
+        </motion.div>
     );
 };
 

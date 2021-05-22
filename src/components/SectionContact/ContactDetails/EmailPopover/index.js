@@ -1,5 +1,8 @@
 import { Box, Button, Flex, Link, Popover, PopoverArrow, PopoverBody, PopoverContent, PopoverTrigger, Stack, useClipboard, useColorModeValue } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 import React from 'react';
+import { slideFade } from '../../../../animations';
+import useSlideFadeOnView from '../../../../hooks/useSlideFadeOnView';
 import { FaClipboard, FaClipboardCheck } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
 import PopoverLink from '../PopoverLink';
@@ -15,11 +18,19 @@ const EmailPopoever = ({ confirmCopy }) => {
         onCopy();
     };
 
+    const [linkRef, linkAnimation] = useSlideFadeOnView();
+
     return (
         <Flex wrap='wrap'>
-            <Box mr={3}>
-                Email:
+            <motion.div
+                ref={linkRef}
+                variants={slideFade}
+                initial='hidden'
+                animate={linkAnimation}>
+                <Box mr={3}>
+                    Email:
             </Box>
+            </motion.div>
             <Popover trigger='hover' placement='bottom'>
                 <PopoverTrigger>
                     <Box width='min'>
