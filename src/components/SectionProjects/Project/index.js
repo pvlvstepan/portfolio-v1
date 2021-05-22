@@ -6,7 +6,8 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import useSlideFadeOnView from '../../../hooks/useSlideFadeOnView';
 import { slideFade } from '../../../animations';
-
+import { AiFillGithub } from 'react-icons/ai';
+import { FiExternalLink } from 'react-icons/fi';
 
 const Project = ({ data }) => {
     const accent = useColorModeValue('light.accent', 'dark.accent');
@@ -65,8 +66,8 @@ const Project = ({ data }) => {
                 initial='hidden'
                 animate={buttonAnimation}>
                 <SimpleGrid columns={2} row={1} maxW={{ xs: 'full', sm: '300px' }} gridGap={6}>
-                    <Button isExternal={true} as={Link} href={data.liveView}>Live View</Button>
-                    <Button isExternal={true} as={Link} href={data.github} variant='secondary'>GitHub</Button>
+                    <Button leftIcon={<FiExternalLink fontSize='18px' />} isExternal={true} as={Link} href={data.liveView}>Live View</Button>
+                    <Button leftIcon={<AiFillGithub />} isExternal={true} as={Link} href={data.github} variant='secondary'>GitHub</Button>
                 </SimpleGrid>
             </motion.div>
         </VStack>
