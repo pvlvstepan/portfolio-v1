@@ -25,7 +25,7 @@ export const staggerChildren = {
             transition: {
                 type: 'spring',
                 duration: 1,
-                staggerChildren: 0.2
+                staggerChildren: 0.1
             }
         }
     },
