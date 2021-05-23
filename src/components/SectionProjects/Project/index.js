@@ -5,7 +5,7 @@ import { AspectRatio, Badge, Box, Heading, Link, SimpleGrid, Text, VStack, Wrap,
 import { motion } from 'framer-motion';
 import React from 'react';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
-import { slideFade } from '../../../animations';
+import { slideFade, staggerChildren } from '../../../animations';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
 
@@ -18,6 +18,7 @@ const Project = ({ data }) => {
     const [titleRef, titleAnimation] = useAnimateOnView();
     const [textRef, textAnimation] = useAnimateOnView();
     const [buttonRef, buttonAnimation] = useAnimateOnView();
+    const [ulRef, ulAnimation] = useAnimateOnView();
 
     return (
         <VStack maxW={{ xs: 'full', lg: '650', xl: '670' }} align='left' spacing='20px'>
@@ -47,10 +48,10 @@ const Project = ({ data }) => {
                     <Text fontSize='16px' align='justify'>
                         {data.description}
                     </Text>
-                    <Wrap mt='20px' spacing={3}>
+                    <Wrap mt='20px' spacing={3} ref={ulRef} as={motion.ul} variants={staggerChildren.container} initial="hidden" animate={ulAnimation}>
                         {data.techStack && data.techStack.map((val, key) => {
                             return (
-                                <WrapItem key={key} >
+                                <WrapItem as={motion.li} key={key} variants={staggerChildren.item} >
                                     <Badge>
                                         {val}
                                     </Badge>
