@@ -9,19 +9,18 @@ const Footer = () => {
     const [ref, animation] = useAnimateOnView();
 
     return (
-        <motion.div
+        <Flex
+            as={motion.footer}
             ref={ref}
             variants={slideFade}
             initial={{ opacity: 0 }}
-            animate={animation}>
-            <Flex
-                fontSize='18px'
-                direction='column'
-                maxW={{ xs: 'full', lg: '650', xl: '670' }} pb={{ xs: '60px', xxl: '85px' }}
-                align='center'>
-                <Text align='center'>Designed & built by Stepan Pavlov. 2021</Text>
-            </Flex>
-        </motion.div>
+            animate={animation}
+            fontSize='18px'
+            direction='column'
+            maxW={{ xs: 'full', lg: '650', xl: '670' }} pb={{ xs: '60px', xxl: '85px' }}
+            align='center'>
+            <Text align='center'>Designed & built by Stepan Pavlov. 2021</Text>
+        </Flex>
     );
 };
 

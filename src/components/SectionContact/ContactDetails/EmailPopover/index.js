@@ -22,15 +22,12 @@ const EmailPopoever = ({ confirmCopy }) => {
 
     return (
         <Flex wrap='wrap'>
-            <motion.div
-                ref={linkRef}
+            <Box as={motion.div} ref={linkRef}
                 variants={slideFade}
                 initial='hidden'
-                animate={linkAnimation}>
-                <Box mr={3}>
-                    Email:
+                animate={linkAnimation} mr={3}>
+                Email:
             </Box>
-            </motion.div>
             <Popover trigger='hover' placement='bottom'>
                 <PopoverTrigger>
                     <Box width='min'>

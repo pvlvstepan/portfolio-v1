@@ -12,21 +12,19 @@ export const SectionTitle = ({ text }) => {
     const [ref, animation] = useAnimateOnView();
 
     return (
-        <motion.div
+        <Heading
+            as={motion.h1}
             ref={ref}
             variants={slideFade}
             initial='hidden'
-            animate={animation}>
-            <Heading
-                as='h1'
-                color={color}
-                fontWeight='bold'
-                fontSize='28px'
-                lineHeight='150%'
-                mb='40px'>
-                {text}
-            </Heading>
-        </motion.div>
+            animate={animation}
+            color={color}
+            fontWeight='bold'
+            fontSize='28px'
+            lineHeight='150%'
+            mb='40px'>
+            {text}
+        </Heading>
     );
 };
 
@@ -35,22 +33,20 @@ export const SectionDescription = ({ text }) => {
     const [ref, animation] = useAnimateOnView();
 
     return (
-        <motion.div
+        <Heading
+            as={motion.h2}
             ref={ref}
             variants={slideFade}
             initial='hidden'
-            animate={animation}>
-            <Heading
-                as='h2'
-                fontWeight='semibold'
-                maxW={{ xs: 'full', sm: '400' }}
-                fontSize={{ xs: '18px', sm: '22px' }}
-                lineHeight='1.65'
-                mt={{ sm: '60px' }}
-                mb='40px'>
-                {text}
-            </Heading>
-        </motion.div>
+            animate={animation}
+            fontWeight='semibold'
+            maxW={{ xs: 'full', sm: '400' }}
+            fontSize={{ xs: '18px', sm: '22px' }}
+            lineHeight='1.65'
+            mt={{ sm: '60px' }}
+            mb='40px'>
+            {text}
+        </Heading>
     );
 };
 
@@ -61,24 +57,23 @@ export const SectionParagraph = ({ text }) => {
     const [ref, animation] = useAnimateOnView();
 
     return (
-        <motion.div
+        <Text
+            as={motion.p}
             ref={ref}
             variants={slideFade}
             initial='hidden'
-            animate={animation}>
-            <Text
-                textAlign='justify'
-                fontWeight='medium'
-                mb='40px'
-                sx={{
-                    '& span': {
-                        fontWeight: 'semibold',
-                        color: color
-                    }
-                }}>
-                {text}
-            </Text>
-        </motion.div>
+            animate={animation}
+            textAlign='justify'
+            fontWeight='medium'
+            mb='40px'
+            sx={{
+                '& span': {
+                    fontWeight: 'semibold',
+                    color: color
+                }
+            }}>
+            {text}
+        </Text>
     );
 };
 

@@ -17,6 +17,7 @@ const PopoverLink = ({ text }) => {
             initial='hidden'
             animate={linkAnimation}>
             <Link
+                as={motion.a}
                 tabIndex={0}
                 fontWeight='semibold'
                 color={accent}
