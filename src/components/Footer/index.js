@@ -1,12 +1,12 @@
 import React from 'react';
 import { Flex, Text } from "@chakra-ui/react";
-import useSlideFadeOnView from '../../hooks/useSlideFadeOnView';
+import useAnimateOnView from '../../hooks/useAnimateOnView';
 import { slideFade } from '../../animations';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
 
-    const [ref, animation] = useSlideFadeOnView();
+    const [ref, animation] = useAnimateOnView();
 
     return (
         <motion.div

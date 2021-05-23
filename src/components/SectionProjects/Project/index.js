@@ -4,7 +4,7 @@ import { Image } from '@chakra-ui/image';
 import { AspectRatio, Badge, Box, Heading, Link, SimpleGrid, Text, VStack, Wrap, WrapItem } from '@chakra-ui/layout';
 import { motion } from 'framer-motion';
 import React from 'react';
-import useSlideFadeOnView from '../../../hooks/useSlideFadeOnView';
+import useAnimateOnView from '../../../hooks/useAnimateOnView';
 import { slideFade } from '../../../animations';
 import { AiFillGithub } from 'react-icons/ai';
 import { FiExternalLink } from 'react-icons/fi';
@@ -14,10 +14,10 @@ const Project = ({ data }) => {
     const primary = useColorModeValue('light.primary', 'dark.primary');
     const bg = useColorModeValue('light.bgLighter', 'dark.bgLighter');
 
-    const [imageRef, imageAnimation] = useSlideFadeOnView();
-    const [titleRef, titleAnimation] = useSlideFadeOnView();
-    const [textRef, textAnimation] = useSlideFadeOnView();
-    const [buttonRef, buttonAnimation] = useSlideFadeOnView();
+    const [imageRef, imageAnimation] = useAnimateOnView();
+    const [titleRef, titleAnimation] = useAnimateOnView();
+    const [textRef, textAnimation] = useAnimateOnView();
+    const [buttonRef, buttonAnimation] = useAnimateOnView();
 
     return (
         <VStack maxW={{ xs: 'full', lg: '650', xl: '670' }} align='left' spacing='20px'>

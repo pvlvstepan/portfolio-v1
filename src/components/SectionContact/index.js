@@ -3,13 +3,13 @@ import React from 'react';
 import { SectionDescription, SectionTitle } from '../TextElements';
 import ContactDetails from './ContactDetails';
 import ContactForm from './ContactForm';
-import useSlideFadeOnView from '../../hooks/useSlideFadeOnView';
+import useAnimateOnView from '../../hooks/useAnimateOnView';
 import { slideFade } from '../../animations';
 import { motion } from 'framer-motion';
 
 const SectionContact = () => {
 
-    const [textRef, textAnimation] = useSlideFadeOnView();
+    const [textRef, textAnimation] = useAnimateOnView();
 
     return (
         <Box as='section' className='section' id='contact' maxW={{ xs: 'full', lg: '650', xl: '670' }}>

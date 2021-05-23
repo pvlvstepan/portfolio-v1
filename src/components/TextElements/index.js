@@ -1,7 +1,7 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Heading, Text, Link } from '@chakra-ui/react';
 import React from 'react';
-import useSlideFadeOnView from '../../hooks/useSlideFadeOnView';
+import useAnimateOnView from '../../hooks/useAnimateOnView';
 import { slideFade } from '../../animations';
 import { motion } from 'framer-motion';
 
@@ -9,7 +9,7 @@ export const SectionTitle = ({ text }) => {
 
     const color = useColorModeValue('light.primary', 'dark.primary');
 
-    const [ref, animation] = useSlideFadeOnView();
+    const [ref, animation] = useAnimateOnView();
 
     return (
         <motion.div
@@ -32,7 +32,7 @@ export const SectionTitle = ({ text }) => {
 
 export const SectionDescription = ({ text }) => {
 
-    const [ref, animation] = useSlideFadeOnView();
+    const [ref, animation] = useAnimateOnView();
 
     return (
         <motion.div
@@ -58,7 +58,7 @@ export const SectionParagraph = ({ text }) => {
 
     const color = useColorModeValue('light.primary', 'dark.primary');
 
-    const [ref, animation] = useSlideFadeOnView();
+    const [ref, animation] = useAnimateOnView();
 
     return (
         <motion.div

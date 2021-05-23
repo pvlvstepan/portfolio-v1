@@ -2,17 +2,17 @@ import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-const useSlideFadeOnView = () => {
-    const slideFade = useAnimation();
+const useAnimateOnView = () => {
+    const animation = useAnimation();
     const { ref, inView } = useInView({ threshold: 0.2 });
 
     useEffect(() => {
         if (inView) {
-            slideFade.start('visible');
+            animation.start('visible');
         }
-    }, [slideFade, inView]);
+    }, [animation, inView]);
 
-    return [ref, slideFade];
+    return [ref, animation];
 };
 
-export default useSlideFadeOnView;
+export default useAnimateOnView;

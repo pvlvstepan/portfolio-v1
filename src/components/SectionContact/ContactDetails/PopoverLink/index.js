@@ -3,12 +3,12 @@ import { Link } from '@chakra-ui/layout';
 import { motion } from 'framer-motion';
 import React from 'react';
 import { slideFade } from '../../../../animations';
-import useSlideFadeOnView from '../../../../hooks/useSlideFadeOnView';
+import useAnimateOnView from '../../../../hooks/useAnimateOnView';
 
 const PopoverLink = ({ text }) => {
 
     const accent = useColorModeValue('light.accent', 'dark.accent');
-    const [linkRef, linkAnimation] = useSlideFadeOnView();
+    const [linkRef, linkAnimation] = useAnimateOnView();
 
     return (
         <motion.div

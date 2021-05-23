@@ -2,7 +2,7 @@ import { Box, Button, Flex, Link, Popover, PopoverArrow, PopoverBody, PopoverCon
 import { motion } from 'framer-motion';
 import React from 'react';
 import { slideFade } from '../../../../animations';
-import useSlideFadeOnView from '../../../../hooks/useSlideFadeOnView';
+import useAnimateOnView from '../../../../hooks/useAnimateOnView';
 import { FaClipboard, FaClipboardCheck } from 'react-icons/fa';
 import { IoIosMail } from 'react-icons/io';
 import PopoverLink from '../PopoverLink';
@@ -18,7 +18,7 @@ const EmailPopoever = ({ confirmCopy }) => {
         onCopy();
     };
 
-    const [linkRef, linkAnimation] = useSlideFadeOnView();
+    const [linkRef, linkAnimation] = useAnimateOnView();
 
     return (
         <Flex wrap='wrap'>

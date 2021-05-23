@@ -5,14 +5,14 @@ import { ParagraphLink, SectionDescription, SectionParagraph, SectionTitle } fro
 import imgAbout from './../../data/img/imgAbout.jpg';
 import {CVLink} from './../../data/contactDetails';
 import TechStack from './TechStack';
-import useSlideFadeOnView from '../../hooks/useSlideFadeOnView';
+import useAnimateOnView from '../../hooks/useAnimateOnView';
 import { slideFade } from '../../animations';
 import { motion } from 'framer-motion';
 
 const SectionAbout = () => {
 
-    const [imageRef, imageAnimation] = useSlideFadeOnView();
-    const [linkRef, linkAnimation] = useSlideFadeOnView();
+    const [imageRef, imageAnimation] = useAnimateOnView();
+    const [linkRef, linkAnimation] = useAnimateOnView();
 
     return (
         <Box as='section' className='section' id='about' maxW={{ xs: 'full', lg: '650', xl: '670' }}>

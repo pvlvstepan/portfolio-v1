@@ -6,14 +6,14 @@ import { Textarea } from '@chakra-ui/textarea';
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { slideFade } from '../../../animations';
-import useSlideFadeOnView from '../../../hooks/useSlideFadeOnView';
+import useAnimateOnView from '../../../hooks/useAnimateOnView';
 
 const ContactForm = () => {
 
-    const [nameRef, nameAnimation] = useSlideFadeOnView();
-    const [emailRef, emailAnimation] = useSlideFadeOnView();
-    const [messageRef, messageAnimation] = useSlideFadeOnView();
-    const [buttonRef, buttonAnimation] = useSlideFadeOnView();
+    const [nameRef, nameAnimation] = useAnimateOnView();
+    const [emailRef, emailAnimation] = useAnimateOnView();
+    const [messageRef, messageAnimation] = useAnimateOnView();
+    const [buttonRef, buttonAnimation] = useAnimateOnView();
 
     const [name, setName] = useState(null);
     const [email, setEmail] = useState(null);
