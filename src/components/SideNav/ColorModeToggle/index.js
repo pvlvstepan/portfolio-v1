@@ -4,10 +4,11 @@ import { Switch } from '@chakra-ui/switch';
 import React from 'react';
 import { Stack } from '@chakra-ui/layout';
 
-const ColorModeToggle = () => {
+const ColorModeToggle = ({ setNavIsOpen }) => {
     const { colorMode, toggleColorMode } = useColorMode();
     return (
-        <Stack direction='row' spacing={3}>
+        <Stack direction='row' spacing={3}
+            onClick={() => setNavIsOpen(false)}>
             <Switch
                 aria-label='Toggle Color Mode'
                 id="colorMode"

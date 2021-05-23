@@ -6,10 +6,14 @@ import SectionProjects from './components/SectionProjects';
 import SideNav from './components/SideNav';
 import 'focus-visible/dist/focus-visible';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
+import { useState } from 'react';
 
 function App() {
 
   const bg = useColorModeValue('light.bg', 'dark.bg');
+
+  const [navIsOpen, setNavIsOpen] = useState(false);
 
   return (
     <Container
@@ -21,7 +25,8 @@ function App() {
         xxl: '1320px'
       }}>
       <Box maxW={{ xs: 'full', lg: '700', xl: '880px' }} bg={bg}>
-        <SideNav />
+        <Navbar navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
+        <SideNav navIsOpen={navIsOpen} setNavIsOpen={setNavIsOpen} />
         <SectionHome />
         <SectionProjects />
         <SectionAbout />

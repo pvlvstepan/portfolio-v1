@@ -3,7 +3,7 @@ import { Link } from '@chakra-ui/layout';
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
-const NavLink = ({ text, to, type, offset }) => {
+const NavLink = ({ text, to, type, offset, setNavIsOpen }) => {
 
     const accent = useColorModeValue('light.accent', 'dark.accent');
 
@@ -58,6 +58,7 @@ const NavLink = ({ text, to, type, offset }) => {
             whiteSpace='nowrap'
             transition='.25s ease-in-out'
             width='min'
+            onClick={() => setNavIsOpen(false)}
             _hover={{
                 color: accent
             }}
