@@ -7,8 +7,7 @@ export const slideFade = {
         opacity: 1,
         y: 0,
         transition: {
-            type: "spring",
-            duration: 1.5,
+            duration: 0.5,
         },
     },
 };
@@ -23,7 +22,6 @@ export const staggerChildren = {
             opacity: 1,
             y: 0,
             transition: {
-                type: 'spring',
                 duration: 1,
                 staggerChildren: 0.1
             }
@@ -33,7 +31,6 @@ export const staggerChildren = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
         transition: {
-            type: 'spring',
             duration: 1.5,
         }
     }

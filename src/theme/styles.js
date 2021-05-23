@@ -17,8 +17,8 @@ const styles = {
                 overflow: 'hidden',
             },
             'section:not(.chakra-popover__content)': {
-                _notFirst: { mt: { base: '0', xxl: '60px' } },
-                pt: { xs: '60px', xxl: '85px' },
+                pt: 0,
+                _notFirst: { mt: { base: '0', xxl: '60px' }, pt: { xs: '60px', xxl: '85px' }, },
                 _last: { pb: { xs: '60px', xxl: '85px' } },
             },
             '.chakra-switch.checked .chakra-switch__track': {

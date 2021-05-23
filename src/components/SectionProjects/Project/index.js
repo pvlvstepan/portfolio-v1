@@ -44,7 +44,7 @@ const Project = ({ data }) => {
                 <Text fontSize='16px' align='justify'>
                     {data.description}
                 </Text>
-                <Wrap mt='20px' spacing={3} ref={ulRef} as={motion.ul} variants={staggerChildren.container} initial="hidden" animate={ulAnimation}>
+                <Wrap mt='20px' spacing={3} ref={ulRef} as={motion.div} variants={staggerChildren.container} initial="hidden" animate={ulAnimation}>
                     {data.techStack && data.techStack.map((val, key) => {
                         return (
                             <WrapItem as={motion.li} key={key} variants={staggerChildren.item} >
