@@ -4,6 +4,10 @@ const styles = {
 
     global: (props) => (
         {
+            '*': {
+                outline: 'none !important',
+                WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)'
+            },
             'body, html': {
                 position: 'relative',
                 overflowX: 'hidden',

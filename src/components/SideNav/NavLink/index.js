@@ -1,7 +1,9 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Link } from '@chakra-ui/layout';
+import { motion } from 'framer-motion';
 import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { staggerNav } from '../../../animations';
 
 const NavLink = ({ text, to, type, offset, setNavIsOpen }) => {
 
@@ -63,7 +65,9 @@ const NavLink = ({ text, to, type, offset, setNavIsOpen }) => {
                 color: accent
             }}
             {...scrollLinkProps}>
-            {text}
+            <motion.div variants={staggerNav.item}>
+                {text}
+            </motion.div>
         </Link>
     );
 };

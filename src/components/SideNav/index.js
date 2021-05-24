@@ -6,6 +6,8 @@ import NavLink from './NavLink';
 import ColorModeToggle from './ColorModeToggle';
 import { github, instagram, linkedIn } from './../../data/contactDetails';
 import NavOverlay from './NavOverlay';
+import { motion, useAnimation } from 'framer-motion';
+import { staggerNav } from '../../animations';
 
 const SideNav = ({ navIsOpen, setNavIsOpen }) => {
 
@@ -19,12 +21,18 @@ const SideNav = ({ navIsOpen, setNavIsOpen }) => {
         }
     }, [navIsOpen]);
 
+    const animateOnLoad = useAnimation();
+
+    useEffect(() => {
+        animateOnLoad.start('visible');
+    }, [animateOnLoad]);
+
 
     return (
         <>
             <NavOverlay setNavIsOpen={setNavIsOpen} visibility={navIsOpen ? 'visible' : 'hidden'} />
             <Flex
-                as='aside'
+                as={motion.aside} variants={staggerNav.container} initial="hidden" animate={animateOnLoad}
                 position='fixed'
                 right={{ xs: navIsOpen ? 0 : '-100%', lg: '0' }} top={0} left='auto'
                 h={{ xs: '100%', lg: '100vh' }}

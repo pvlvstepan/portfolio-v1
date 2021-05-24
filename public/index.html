@@ -11,7 +11,7 @@
   <title>Stepan Pavlov</title>
   <style>
     :root {
-      --main-bg-color: #222222;
+      --main-bg-color: #1d1d1d;
       --main-text-color: #BBBBBB;
       --main-accent-color: #3A86FF;
     }
@@ -25,8 +25,10 @@
 
     .loader-container {
       background-color: var(--main-bg-color);
-      filter: brightness(0.9);
-      -webkit-filter: brightness(0.9);
+      filter: brightness(0.7);
+      -webkit-filter: brightness(0.7);
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
       color: var(--main-text-color);
       position: fixed;
       top: 0;
@@ -38,7 +40,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: 1s ease-out;
+      transition: 0.5s ease-in-out;
     }
 
     .loader--hide {
@@ -87,7 +89,7 @@
 
     @media (prefers-color-scheme: light) {
       :root {
-        --main-bg-color: #E5E5E5;
+        --main-bg-color: #d4d4d4;
         --main-text-color: #3E3E3E;
         --main-accent-color: #0A68FF;
       }
