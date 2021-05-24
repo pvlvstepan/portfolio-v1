@@ -14,13 +14,7 @@ export const slideFade = {
 
 export const staggerChildren = {
     container: {
-        hidden: {
-            opacity: 0,
-            y: 40,
-        },
         visible: {
-            opacity: 1,
-            y: 0,
             transition: {
                 staggerChildren: 0.2
             }
@@ -39,11 +33,7 @@ export const staggerChildren = {
 
 export const staggerHero = {
     container: {
-        hidden: {
-            opacity: 0,
-        },
         visible: {
-            opacity: 1,
             transition: {
                 delay: 1.5,
                 delayChildren: 1.5,
@@ -64,11 +54,7 @@ export const staggerHero = {
 
 export const staggerNav = {
     container: {
-        hidden: {
-            opacity: 0,
-        },
         visible: {
-            opacity: 1,
             transition: {
                 delayChildren: 1,
                 staggerChildren: 0.2
