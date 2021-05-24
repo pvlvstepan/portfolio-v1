@@ -11,11 +11,11 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const loader = document.querySelector(".loader-container");
-
-  const hideLoader = () => loader.classList.add("loader--hide");
-
   useEffect(() => {
+    const loader = document.querySelector(".loader-container");
+
+    const hideLoader = () => loader.classList.add("loader--hide");
+
     hideLoader();
   }, []);
 

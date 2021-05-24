@@ -16,8 +16,8 @@ const config = {
 };
 
 const fonts = {
-    body: 'Montserrat',
-    heading: 'Montserrat'
+    body: "'Montserrat', sans-serif",
+    heading: "'Montserrat', sans-serif"
 };
 
 const overrides = extendTheme({
