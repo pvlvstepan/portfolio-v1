@@ -45,7 +45,8 @@ export const staggerHero = {
         visible: {
             opacity: 1,
             transition: {
-                staggerChildren: 0.5
+                delayChildren: 1,
+                staggerChildren: 0.2
             }
         }
     },

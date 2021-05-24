@@ -10,33 +10,96 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
   <title>Stepan Pavlov</title>
   <style>
+    :root {
+      --main-bg-color: #222222;
+      --main-text-color: #BBBBBB;
+      --main-accent-color: #3A86FF;
+    }
+
+    noscript {
+      font-family: sans-serif;
+      font-size: large;
+      max-width: 300px;
+      text-align: center;
+    }
+
     .loader-container {
-      background-color: #222222;
+      background-color: var(--main-bg-color);
+      filter: brightness(0.9);
+      -webkit-filter: brightness(0.9);
+      color: var(--main-text-color);
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100vh;
+      width: 100vw;
+      height: 100%;
       overflow: hidden;
       z-index: 99999;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: all 0.5s ease-out;
+      transition: 1s ease-out;
     }
 
     .loader--hide {
       opacity: 0;
       visibility: hidden;
     }
+
+    .loader--hide .spinner {
+      opacity: 0;
+    }
+
+    .spinner {
+      width: 60px;
+      height: 60px;
+      transition: .5s ease-in-out;
+      background-color: var(--main-accent-color);
+
+      border-radius: 100%;
+      -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+      animation: sk-scaleout 1.0s infinite ease-in-out;
+    }
+
+    @-webkit-keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0)
+      }
+
+      100% {
+        -webkit-transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    @keyframes sk-scaleout {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+
+      100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+        opacity: 0;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --main-bg-color: #E5E5E5;
+        --main-text-color: #3E3E3E;
+        --main-accent-color: #0A68FF;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <div class="loader-container">
-
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="spinner"></div>
   </div>
   </div>
 </body>
