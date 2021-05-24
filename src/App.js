@@ -7,9 +7,17 @@ import SideNav from './components/SideNav';
 import 'focus-visible/dist/focus-visible';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const loader = document.querySelector(".loader-container");
+
+  const hideLoader = () => loader.classList.add("loader--hide");
+
+  useEffect(() => {
+    hideLoader();
+  }, []);
 
   const bg = useColorModeValue('light.bg', 'dark.bg');
 
