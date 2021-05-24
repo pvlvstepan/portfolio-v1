@@ -11,6 +11,7 @@ const NavOverlay = ({ visibility, setNavIsOpen }) => {
             top={0}
             left={0}
             onClick={() => setNavIsOpen(false)}
+            onTouchStart={() => setNavIsOpen(false)}
             zIndex='docked'
             bg='blackAlpha.400'
             sx={{

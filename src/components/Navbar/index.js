@@ -4,6 +4,7 @@ import { Squeeze as Hamburger } from 'hamburger-react';
 import React, { useEffect, useState } from 'react';
 import NavLink from '../SideNav/NavLink';
 import useScrollDirection from '../../hooks/useScrollDirection';
+import { motion, useAnimation } from 'framer-motion';
 
 const Navbar = ({ navIsOpen, setNavIsOpen }) => {
 
@@ -16,13 +17,16 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
         setScrolledToTop(window.pageYOffset < 50);
     };
 
+    const animateOnLoad = useAnimation();
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+        animateOnLoad.start({ opacity: 1, transition: { duration: 0.5, delay: 1 } });
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [animateOnLoad]);
 
     return (
         <Flex
@@ -49,7 +53,9 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
                 opacity={navIsOpen || scrolledToTop ? 0 : 1}>
                 <NavLink text='Stepan Pavlov' to='home' type='title' />
             </Box>
-            <Hamburger label='Open Side Menu' toggled={navIsOpen} toggle={setNavIsOpen} rounded={true} color={secondary} />
+            <motion.div initial={{ opacity: 0 }} animate={animateOnLoad}>
+                <Hamburger label='Open Side Menu' toggled={navIsOpen} toggle={setNavIsOpen} rounded={true} color={secondary} />
+            </motion.div>
         </Flex>
     );
 };
