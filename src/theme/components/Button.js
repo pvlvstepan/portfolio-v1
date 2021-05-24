@@ -5,6 +5,7 @@ const Button = {
         textDecoration: 'none !important',
         fontWeight: "bold",
         textTransform: "uppercase",
+        letterSpacing: 'wide',
         rounded: 'xl',
         transition: '.25s ease-in-out'
     },
