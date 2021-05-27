@@ -32,6 +32,8 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
         <Flex
             as='header'
             px={2}
+            pl='max(8px, env(safe-area-inset-left))'
+            pr='max(8px, env(safe-area-inset-right))'
             py={scrolledToTop || navIsOpen ? 4 : 0}
             display={{ xs: 'flex', lg: 'none' }}
             transition='.25s ease-in-out'
