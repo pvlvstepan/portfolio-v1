@@ -37,7 +37,7 @@ const SideNav = ({ navIsOpen, setNavIsOpen }) => {
                 right={{ xs: navIsOpen ? 0 : '-100%', lg: '0' }} top={0} left='auto'
                 h={{ xs: '100%', lg: '100vh' }}
                 zIndex='sticky'
-                maxW={{ xs: '260px', lg: '40%' }}
+                maxW={{ xs: 'calc(260px + env(safe-area-inset-left))', lg: '40%' }}
                 width='100%'
                 overflowY='auto'
                 bg={{ xs: bg, lg: 'none' }}

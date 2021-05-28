@@ -13,6 +13,7 @@ const styles = {
                 overflowX: 'hidden',
                 minW: '320px',
                 lineHeight: 2,
+                bgColor: mode('light.bg', 'dark.bg')(props),
                 bg: { xs: mode('light.bg', 'dark.bg')(props), lg: mode('light.bgGradient', 'dark.bgGradient')(props) },
                 fontSize: '16px',
                 color: mode('light.secondary', 'dark.secondary')(props)
