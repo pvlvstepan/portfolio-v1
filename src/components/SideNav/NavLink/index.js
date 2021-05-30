@@ -5,7 +5,7 @@ import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { staggerNav } from '../../../animations';
 
-const NavLink = ({ text, to, type, offset, setNavIsOpen }) => {
+const NavLink = ({ text, to, type, offset }) => {
 
     const accent = useColorModeValue('light.accent', 'dark.accent');
 
@@ -60,7 +60,6 @@ const NavLink = ({ text, to, type, offset, setNavIsOpen }) => {
             whiteSpace='nowrap'
             transition='.25s ease-in-out'
             width='min'
-            onClick={() => setNavIsOpen(false)}
             _hover={{
                 color: accent
             }}

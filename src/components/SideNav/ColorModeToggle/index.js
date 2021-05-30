@@ -6,11 +6,10 @@ import { Stack } from '@chakra-ui/layout';
 import { staggerNav } from '../../../animations';
 import { motion } from 'framer-motion';
 
-const ColorModeToggle = ({ setNavIsOpen }) => {
+const ColorModeToggle = () => {
     const { colorMode, toggleColorMode } = useColorMode();
     return (
-        <Stack as={motion.div} variants={staggerNav.item} direction='row' spacing={3}
-            onClick={() => setNavIsOpen(false)}>
+        <Stack as={motion.div} variants={staggerNav.item} direction='row' spacing={3}>
             <Switch
                 aria-label='Toggle Color Mode'
                 id="colorMode"

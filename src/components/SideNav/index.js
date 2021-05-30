@@ -51,19 +51,19 @@ const SideNav = ({ navIsOpen, setNavIsOpen }) => {
                 alignItems='left'
                 justifyContent='space-between'
                 transition='right .25s ease-in-out'>
-                <NavLink text='Stepan Pavlov' to='home' type='title' setNavIsOpen={setNavIsOpen} />
+                <NavLink text='Stepan Pavlov' to='home' type='title' />
                 <VStack as='nav' spacing={3} align='left' my={12}>
-                    <NavLink text='Projects' to='projects' type='menuLink' setNavIsOpen={setNavIsOpen} />
-                    <NavLink text='About' to='about' type='menuLink' setNavIsOpen={setNavIsOpen} />
-                    <NavLink text='Contact' to='contact' type='menuLink' setNavIsOpen={setNavIsOpen} />
+                    <NavLink text='Projects' to='projects' type='menuLink' />
+                    <NavLink text='About' to='about' type='menuLink' />
+                    <NavLink text='Contact' to='contact' type='menuLink' />
                 </VStack>
                 <VStack spacing={12} align='left'>
                     <HStack as='nav' spacing={6}>
-                        <NavLink text={<AiOutlineInstagram />} to={instagram} type='socialLink' setNavIsOpen={setNavIsOpen} />
-                        <NavLink text={<AiFillGithub />} to={github} type='socialLink' setNavIsOpen={setNavIsOpen} />
-                        <NavLink text={<FaLinkedinIn />} to={linkedIn} type='socialLink' setNavIsOpen={setNavIsOpen} />
+                        <NavLink text={<AiOutlineInstagram />} to={instagram} type='socialLink' />
+                        <NavLink text={<AiFillGithub />} to={github} type='socialLink' />
+                        <NavLink text={<FaLinkedinIn />} to={linkedIn} type='socialLink' />
                     </HStack>
-                    <ColorModeToggle setNavIsOpen={setNavIsOpen} />
+                    <ColorModeToggle />
                 </VStack>
             </Flex>
         </>
