@@ -1,10 +1,11 @@
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { Box, Flex } from '@chakra-ui/layout';
 import { Squeeze as Hamburger } from 'hamburger-react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import NavLink from '../SideNav/NavLink';
 import useScrollDirection from '../../hooks/useScrollDirection';
 import { motion, useAnimation } from 'framer-motion';
+import { useOutsideClick } from '@chakra-ui/hooks';
 
 const Navbar = ({ navIsOpen, setNavIsOpen }) => {
 
@@ -27,6 +28,13 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [animateOnLoad]);
+
+    const navBtnRef = useRef();
+
+    useOutsideClick({
+        ref: navBtnRef,
+        handler: () => setNavIsOpen(false)
+    });
 
     return (
         <Flex
@@ -55,7 +63,7 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
                 opacity={navIsOpen || scrolledToTop ? 0 : 1}>
                 <NavLink text='Stepan Pavlov' to='home' type='title' />
             </Box>
-            <motion.div initial={{ opacity: 0 }} animate={animateOnLoad}>
+            <motion.div ref={navBtnRef} initial={{ opacity: 0 }} animate={animateOnLoad}>
                 <Hamburger label='Open Side Menu' toggled={navIsOpen} toggle={setNavIsOpen} rounded={true} color={secondary} />
             </motion.div>
         </Flex>

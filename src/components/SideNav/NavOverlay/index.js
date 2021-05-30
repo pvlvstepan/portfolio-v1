@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/layout';
 import React from 'react';
 
-const NavOverlay = ({ visibility, setNavIsOpen }) => {
+const NavOverlay = ({ visibility }) => {
 
     return (
         <Box
@@ -10,8 +10,6 @@ const NavOverlay = ({ visibility, setNavIsOpen }) => {
             pos='fixed'
             top={0}
             left={0}
-            onClick={() => setNavIsOpen(false)}
-            onTouchStart={() => setNavIsOpen(false)}
             zIndex='docked'
             bg='blackAlpha.400'
             sx={{

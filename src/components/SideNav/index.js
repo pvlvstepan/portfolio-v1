@@ -30,7 +30,7 @@ const SideNav = ({ navIsOpen, setNavIsOpen }) => {
 
     return (
         <>
-            <NavOverlay setNavIsOpen={setNavIsOpen} visibility={navIsOpen ? 'visible' : 'hidden'} />
+            <NavOverlay visibility={navIsOpen ? 'visible' : 'hidden'} />
             <Flex
                 as={motion.aside} variants={staggerNav.container} initial="hidden" animate={animateOnLoad}
                 position='fixed'
