@@ -47,6 +47,21 @@ const styles = {
             },
             '.chakra-button__icon': {
                 fontSize: '22px'
+            },
+            '@media screen and (max-height: 720px)': {
+                'section:not(.chakra-popover__content)': {
+                    _first: {
+                        height: 'auto',
+                        pt: '60px'
+                    }
+                }
+            },
+            '@media screen and (min-width: 1400px) and (max-height: 720px)': {
+                'section:not(.chakra-popover__content)': {
+                    _first: {
+                        pt: '80px'
+                    }
+                }
             }
         }
     )
