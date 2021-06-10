@@ -23,7 +23,7 @@ const styles = {
             },
             'section:not(.chakra-popover__content)': {
                 pt: 0,
-                _notFirst: { mt: { base: '0', xxl: '60px' }, pt: { xs: '60px', xxl: '85px' }, },
+                _notFirst: { mt: { xs: '60px', xxl: '80px' }, pt: { xs: '60px', xxl: '85px' }, },
                 _last: { pb: { xs: '60px', xxl: '85px' } },
             },
             '.chakra-switch.checked .chakra-switch__track': {
