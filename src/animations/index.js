@@ -49,6 +49,16 @@ export const staggerHero = {
                 duration: 0.5
             }
         },
+    },
+    img: {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delay: 2,
+                duration: 1
+            }
+        },
     }
 };
 
