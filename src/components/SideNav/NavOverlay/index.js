@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/layout';
 import React from 'react';
 
-const NavOverlay = ({ visibility }) => {
+const NavOverlay = ({ visibility, setNavIsOpen }) => {
 
     return (
         <Box
@@ -16,6 +16,8 @@ const NavOverlay = ({ visibility }) => {
                 backdropFilter: 'blur(4px)',
                 WebkitBackdropFilter: 'blur(4px)'
             }}
+            onClick={() => setNavIsOpen(false)}
+            onTouchStart={() => setNavIsOpen(false)}
             opacity={visibility === 'visible' ? 1 : 0}
             transition='.25s ease-in-out'
             visibility={visibility}>

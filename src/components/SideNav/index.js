@@ -30,7 +30,7 @@ const SideNav = ({ navIsOpen, setNavIsOpen }) => {
 
     return (
         <>
-            <NavOverlay visibility={navIsOpen ? 'visible' : 'hidden'} />
+            <NavOverlay setNavIsOpen={setNavIsOpen} visibility={navIsOpen ? 'visible' : 'hidden'} />
             <Flex
                 as={motion.aside} variants={staggerNav.container} initial="hidden" animate={animateOnLoad}
                 position='fixed'
@@ -51,19 +51,19 @@ const SideNav = ({ navIsOpen, setNavIsOpen }) => {
                 alignItems='left'
                 justifyContent='space-between'
                 transition='right .25s ease-in-out'>
-                <NavLink text='Stepan Pavlov' to='home' type='title' />
+                <NavLink setNavIsOpen={setNavIsOpen} text='Stepan Pavlov' to='home' type='title' />
                 <VStack as='nav' spacing={3} align='left' my={12}>
-                    <NavLink text='Projects' to='projects' type='menuLink' />
-                    <NavLink text='About' to='about' type='menuLink' />
-                    <NavLink text='Contact' to='contact' type='menuLink' />
+                    <NavLink setNavIsOpen={setNavIsOpen} text='Projects' to='projects' type='menuLink' />
+                    <NavLink setNavIsOpen={setNavIsOpen} text='About' to='about' type='menuLink' />
+                    <NavLink setNavIsOpen={setNavIsOpen} text='Contact' to='contact' type='menuLink' />
                 </VStack>
                 <VStack spacing={12} align='left'>
                     <HStack as='nav' spacing={6}>
-                        <NavLink text={<AiOutlineInstagram />} to={instagram} type='socialLink' />
-                        <NavLink text={<AiFillGithub />} to={github} type='socialLink' />
-                        <NavLink text={<FaLinkedinIn />} to={linkedIn} type='socialLink' />
+                        <NavLink setNavIsOpen={setNavIsOpen} text={<AiOutlineInstagram />} to={instagram} type='socialLink' />
+                        <NavLink setNavIsOpen={setNavIsOpen} text={<AiFillGithub />} to={github} type='socialLink' />
+                        <NavLink setNavIsOpen={setNavIsOpen} text={<FaLinkedinIn />} to={linkedIn} type='socialLink' />
                     </HStack>
-                    <ColorModeToggle />
+                    <ColorModeToggle setNavIsOpen={setNavIsOpen} />
                 </VStack>
             </Flex>
         </>
