@@ -22,8 +22,8 @@ const SectionHome = () => {
         <Box
             as='section'
             className='section'
-            pr={{ md: '25%', lg: 0 }}
-            mr={{ md: '-25%', lg: 0 }}
+            pr={{ xs: '5%', md: '25%', lg: 0 }}
+            mr={{ xs: '-5%', md: '-25%', lg: 0 }}
             h={{ xs: '850px', sm: '920px', md: '100vh' }}
             id='home'
             display='flex'
