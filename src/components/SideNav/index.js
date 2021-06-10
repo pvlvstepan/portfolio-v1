@@ -40,6 +40,7 @@ const SideNav = ({ navIsOpen, setNavIsOpen }) => {
                 maxW={{ xs: 'calc(260px + env(safe-area-inset-left))', lg: '40%' }}
                 width='100%'
                 overflowY='auto'
+                overflowX='hidden'
                 bg={{ xs: bg, lg: 'none' }}
                 p={{
                     xs: '80px 60px 80px 30px',

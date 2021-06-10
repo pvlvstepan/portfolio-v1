@@ -11,7 +11,7 @@ const styles = {
             'body, html': {
                 position: 'relative',
                 overflowX: 'hidden',
-                minW: '320px',
+                minW: '362px',
                 lineHeight: 2,
                 bgColor: mode('light.bg', 'dark.bg')(props),
                 bg: { xs: mode('light.bg', 'dark.bg')(props), lg: mode('light.bgGradient', 'dark.bgGradient')(props) },
@@ -48,7 +48,7 @@ const styles = {
             '.chakra-button__icon': {
                 fontSize: '22px'
             },
-            '@media screen and (max-height: 720px)': {
+            '@media screen and (max-height: 720px) and (min-width: 768px)': {
                 'section:not(.chakra-popover__content)': {
                     _first: {
                         height: 'auto',
