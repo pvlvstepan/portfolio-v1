@@ -21,7 +21,7 @@ const SectionContact = () => {
                 variants={slideFade}
                 initial='hidden'
                 animate={textAnimation}>
-                <Text mb='10px' fontSize='18px' fontWeight='semibold'>Or, better yet, let me get back to you.</Text>
+                <Text maxW='360px' mb='10px' fontSize='18px' fontWeight='semibold'>Or, better yet, leave a message for me so I can get back to you.</Text>
             </motion.div>
             <ContactForm />
         </Box>

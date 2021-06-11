@@ -8,7 +8,7 @@ const SectionProjects = () => {
     return (
         <Box as='section' className='section' id='projects'>
             <SectionTitle text='Projects' />
-            <SectionDescription text="Take a look at some of my recent projects I've worked on." />
+            <SectionDescription text="Take a look at some of the recent projects I've worked on." />
             <VStack spacing='120px' align='left'>
                 {projectsData && projectsData.map((val, key) => {
                     return (

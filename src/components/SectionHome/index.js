@@ -50,7 +50,7 @@ const SectionHome = () => {
                     I create things for the web
                     </Heading>
                 <Text zIndex='5' pos='relative' as={motion.p} variants={staggerHero.item} fontWeight='medium' fontSize='18px' lineHeight='150%' maxW='400px' mb='40px'>
-                    I'm a Russian Software Developer based in Kuala Lumpur, Malaysia passionate about building and designing high-quality websites and applications.
+                    I'm a Russian Software Developer based in Kuala Lumpur, Malaysia, passionate about building and designing high-quality websites and applications.
                 </Text>
                 <Wrap zIndex='5' pos='relative' as={motion.div} variants={staggerHero.item} maxW='200px' spacing={6}>
                     <WrapItem w='full'>
