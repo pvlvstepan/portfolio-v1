@@ -45,7 +45,7 @@ const SectionAbout = () => {
             />
             < SectionParagraph text = 
             {
-                <> And while I do spend most of my time learing and building new things, sometimes I can be seen roaming around over the snowy hills of < ParagraphLink text = 'Russia' to = '' /> or city jungles of < ParagraphLink text = 'Kuala Lumpur' to = '' />, when I'm not if front of a computer screen.</>
+                <> And while I do spend most of my time learing and building new things, sometimes I can be seen roaming around over the snowy hills of < ParagraphLink text = 'Russia' to = 'https://www.instagram.com/p/Bwb6rdsgBKm' /> or city jungles of < ParagraphLink text = 'Kuala Lumpur' to = 'https://www.instagram.com/p/B2yhieIA0-5' />, when I'm not if front of a computer screen.</>
             } 
             />
             <SectionDescription text="Some of the technologies I've worked with" />
