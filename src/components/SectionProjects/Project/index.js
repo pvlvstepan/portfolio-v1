@@ -26,8 +26,8 @@ const Project = ({ data }) => {
                 as={motion.div} ref={imageRef}
                 variants={slideFade}
                 initial='hidden'
-                animate={imageAnimation} ratio={17 / 9}>
-                <Image src={data.img} alt={data.title} w='670px' h='500px' />
+                animate={imageAnimation} ratio={16 / 9}>
+                <Image src={data.img} alt={data.title} w='670px' h='377px' />
             </AspectRatio>
             <motion.div
                 ref={titleRef}
