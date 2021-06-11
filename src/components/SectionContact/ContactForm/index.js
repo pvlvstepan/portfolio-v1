@@ -101,7 +101,7 @@ const ContactForm = () => {
                     variants={slideFade}
                     initial='hidden'
                     animate={buttonAnimation}>
-                    <Button w='full'>Send Message</Button>
+                    <Button w='full' isDisabled={true}>Send Message</Button>
                 </motion.div>
             </VStack>
         </form>

@@ -7,7 +7,7 @@ const Button = {
         textTransform: "uppercase",
         letterSpacing: 'wide',
         rounded: 'xl',
-        transition: '.25s ease-in-out'
+        transition: '.25s ease-in-out',
     },
     sizes: {
         sm: {
@@ -27,6 +27,9 @@ const Button = {
             borderColor: mode('light.accent', 'dark.accent')(props),
             color: mode('light.accent', 'dark.accent')(props),
             _hover: {
+                _disabled: {
+                    bg: mode(darken("light.bg", 10), darken("dark.bgLighter", 5))(props)
+                },
                 bg: mode(darken("light.bg", 10), darken("dark.bgLighter", 5))(props)
             }
         }),
@@ -34,6 +37,9 @@ const Button = {
             bg: mode('light.accent', 'dark.accent')(props),
             color: "dark.primary",
             _hover: {
+                _disabled: {
+                    bg: mode(darken('light.accent', 10), lighten('dark.accent', 10))(props)
+                },
                 bg: mode(darken('light.accent', 10), lighten('dark.accent', 10))(props)
             }
         })
