@@ -17,14 +17,14 @@ const PopoverLink = ({ text }) => {
             initial='hidden'
             animate={linkAnimation}>
             <Link
-                as={motion.a}
+                as={motion.button}
                 tabIndex={0}
                 fontWeight='semibold'
                 color={accent}
                 textDecor='none !important'
                 lineHeight='1'
                 height='min'
-                pb='3px'
+                pb='6px'
                 width='min'
                 borderBottom='2px solid'
                 whiteSpace='nowrap'
