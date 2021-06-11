@@ -5,7 +5,7 @@ import React from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { staggerNav } from '../../../animations';
 
-const NavLink = ({ text, to, type, offset, setNavIsOpen }) => {
+const NavLink = ({ text, to, type, offset, setNavIsOpen, title }) => {
 
     const accent = useColorModeValue('light.accent', 'dark.accent');
 
@@ -50,7 +50,8 @@ const NavLink = ({ text, to, type, offset, setNavIsOpen }) => {
 
     return (
         <Link
-            aria-label={'Link to ' + to}
+            aria-label={'Link to ' + title}
+            title={'Link to ' + title}
             href={to}
             rounded='xl'
             isExternal={type === 'socialLink' ? true : false}

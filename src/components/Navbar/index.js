@@ -55,7 +55,7 @@ const Navbar = ({ navIsOpen, setNavIsOpen }) => {
                 opacity={navIsOpen || scrolledToTop ? 0 : 1}>
                 <NavLink setNavIsOpen={setNavIsOpen} text='Stepan Pavlov' to='home' type='title' />
             </Box>
-            <motion.div initial={{ opacity: 0 }} animate={animateOnLoad}>
+            <motion.div initial={{ opacity: 0 }} animate={animateOnLoad} title={navIsOpen ? 'Close Menu' : 'Open Menu'}>
                 <Hamburger label='Open Side Menu' toggled={navIsOpen} toggle={setNavIsOpen} rounded={true} color={secondary} />
             </motion.div>
         </Flex>

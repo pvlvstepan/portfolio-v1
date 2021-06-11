@@ -60,9 +60,9 @@ const SideNav = ({ navIsOpen, setNavIsOpen }) => {
                 </VStack>
                 <VStack spacing={12} align='left'>
                     <HStack as='nav' spacing={6}>
-                        <NavLink setNavIsOpen={setNavIsOpen} text={<AiOutlineInstagram />} to={instagram} type='socialLink' />
-                        <NavLink setNavIsOpen={setNavIsOpen} text={<AiFillGithub />} to={github} type='socialLink' />
-                        <NavLink setNavIsOpen={setNavIsOpen} text={<FaLinkedinIn />} to={linkedIn} type='socialLink' />
+                        <NavLink title='Instagram' setNavIsOpen={setNavIsOpen} text={<AiOutlineInstagram />} to={instagram} type='socialLink' />
+                        <NavLink title='GitHub' setNavIsOpen={setNavIsOpen} text={<AiFillGithub />} to={github} type='socialLink' />
+                        <NavLink title='LinkedIn' setNavIsOpen={setNavIsOpen} text={<FaLinkedinIn />} to={linkedIn} type='socialLink' />
                     </HStack>
                     <ColorModeToggle setNavIsOpen={setNavIsOpen} />
                 </VStack>
