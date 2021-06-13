@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+<h1  align='center'>
+stepanpavlov.com
+</h1>
+<p align="center">
+This is a place where everything about me, my projects and skills can be found. This website isn't just my portfolio, but also a personal project in and of itself. I think I've grown quite a bit as a developer & engineer, so I wanted to create something to showcase some of what I've learned and done.
+</p>
+<p align="center">
+  <a href="https://app.netlify.com/sites/stepanpavlov/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/a4ae8731-2598-47be-9104-a927f0e7af8d/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![demo](https://i.imgur.com/Ipq2kGT.png)
 
-## Available Scripts
+## What I've used to build it
 
-In the project directory, you can run:
+Hosted with [Netlify](https://www.netlify.com)
+Built with:
 
-### `npm start`
+- [React](https://github.com/facebook/react)
+- [Node.js](https://github.com/nodejs/node)
+- [Chakra-UI](https://github.com/chakra-ui/chakra-ui)
+- [Framer Motion](https://www.framer.com/motion/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 🚨 Forking this repository (Please read!)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+I value keeping my code open source, but please take note that it is not intended to be used as a starter template or theme. For that purpose you could follow up with [Chakra-UI](https://chakra-ui.com/docs/getting-started) and [React](https://reactjs.org/docs/getting-started.html) documentation. **Plagiarism is bad** and it is quite discouraging seeing someone copying your work without a proper attribution. I spent substantial amount of time and effort building and designing this website and I am proud of my work!
 
-### `npm test`
+All I am asking for is not to claim this effort as your own. Please email me via contact below and give a proper credit by linking back to [stepanpavlov.com](stepanpavlov.com) if you wish to fork this repo.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Installation & Set Up
 
-### `npm run build`
+1. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```sh
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server
 
-### `npm run eject`
+   ```sh
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🚀 Building and Running for Production
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Generate a full static production build
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```sh
+   npm run build
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Preview the site as it will appear once deployed
 
-## Learn More
+   ```sh
+   npm run serve
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎨 Color References
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Light Mode
 
-### Code Splitting
+| Color              | Hex                                                                |
+| ------------------ | ------------------------------------------------------------------ |
+| Accent             | ![#0A68FF](https://via.placeholder.com/10/0A68FF?text=+) `#0A68FF` |
+| Background         | ![#E5E5E5](https://via.placeholder.com/10/E5E5E5?text=+) `#E5E5E5` |
+| Lighter Background | ![#FAFAFA](https://via.placeholder.com/10/FAFAFA?text=+) `#FAFAFA` |
+| Primary Text       | ![#222222](https://via.placeholder.com/10/222222?text=+) `#222222` |
+| Secondary Text     | ![#3E3E3E](https://via.placeholder.com/10/3E3E3E?text=+) `#3E3E3E` |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Dark Mode
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| Color              | Hex                                                                |
+| ------------------ | ------------------------------------------------------------------ |
+| Accent             | ![#3A86FF](https://via.placeholder.com/10/3A86FF?text=+) `#3A86FF` |
+| Background         | ![#222222](https://via.placeholder.com/10/222222?text=+) `#222222` |
+| Lighter Background | ![#383838](https://via.placeholder.com/10/383838?text=+) `#383838` |
+| Primary Text       | ![#FFFFFF](https://via.placeholder.com/10/FFFFFF?text=+) `#FFFFFF` |
+| Secondary Text     | ![#BBBBBB](https://via.placeholder.com/10/BBBBBB?text=+) `#BBBBBB` |
