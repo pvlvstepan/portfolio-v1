@@ -15,6 +15,12 @@ const useForm = (validateInput) => {
 
     const [errors, setErrors] = useState({});
 
+    const encodeData = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    };
+
     const handleChange = e => {
         const { name, value } = e.target;
         setValues({
@@ -38,9 +44,17 @@ const useForm = (validateInput) => {
             message: true,
         });
 
-        e.preventDefault();
+        if (!errors.name && !errors.email && !errors.message) {
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encodeData({ "form-name": "contact", ...values })
+            })
+                .then(() => alert("Success!"))
+                .catch(error => alert(error));
+        }
 
-        setErrors(validateInput(values));
+        e.preventDefault();
     };
 
     return { handleChange, handleSubmit, values, errors, touched };
