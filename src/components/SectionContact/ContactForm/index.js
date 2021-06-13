@@ -3,12 +3,13 @@ import { FormControl, FormErrorMessage, FormLabel } from '@chakra-ui/form-contro
 import { Input } from '@chakra-ui/input';
 import { VStack } from '@chakra-ui/layout';
 import { Textarea } from '@chakra-ui/textarea';
-import React from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { slideFade } from '../../../animations';
 import useAnimateOnView from '../../../hooks/useAnimateOnView';
 import useForm from '../../../hooks/useForm';
 import validateInput from './validateInput';
+import { useToast } from '@chakra-ui/react';
 
 const ContactForm = () => {
 
@@ -17,7 +18,22 @@ const ContactForm = () => {
     const [messageRef, messageAnimation] = useAnimateOnView();
     const [buttonRef, buttonAnimation] = useAnimateOnView();
 
-    const { handleChange, handleSubmit, values, errors, touched } = useForm(validateInput);
+    const toast = useToast();
+    const toastIdRef = useRef();
+
+    const showToast = (text, status) => {
+        if (toastIdRef.current) {
+            toast.close(toastIdRef.current);
+        }
+        toastIdRef.current = toast({
+            title: text,
+            status: status,
+            isClosable: true,
+            duration: 4000
+        });
+    };
+
+    const { handleChange, handleSubmit, values, errors, touched } = useForm(validateInput, showToast);
 
     return (
         <form autoComplete="off" onSubmit={handleSubmit}>

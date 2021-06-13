@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useForm = (validateInput) => {
+const useForm = (validateInput, showToast) => {
     const [values, setValues] = useState({
         name: '',
         email: '',
@@ -50,8 +50,8 @@ const useForm = (validateInput) => {
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
                 body: encodeData({ "form-name": "contact", ...values })
             })
-                .then(() => alert("Success!"))
-                .catch(error => alert(error));
+                .then(() => showToast('Message sent successfuly!', 'success'))
+                .catch(error => showToast(error, 'error'));
         }
 
         e.preventDefault();
