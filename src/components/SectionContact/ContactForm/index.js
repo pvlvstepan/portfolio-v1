@@ -36,8 +36,7 @@ const ContactForm = () => {
     const { handleChange, handleSubmit, values, errors, touched } = useForm(validateInput, showToast);
 
     return (
-        <form name="contact" method="post" autoComplete="off" onSubmit={handleSubmit} data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact" />
+        <form autoComplete="off" onSubmit={handleSubmit}>
             <div hidden>
                 <input name="bot-field" />
             </div>
