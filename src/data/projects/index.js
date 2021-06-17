@@ -1,5 +1,6 @@
 import covidTracker from './img/covidTracker.png';
 import movieLister from './img/movieLister.png';
+import dentisGenerator from './img/dentisGenerator.png';
 
 const projectsData = [
     {
@@ -20,7 +21,7 @@ const projectsData = [
     },
     {
         title: 'Instagram Post Generator - Dentis LLC',
-        img: 'https://place-hold.it/670x377',
+        img: dentisGenerator,
         description: 'This web application was developed for Dentis LLC to ease Instagram post creation. Previously employees had to insert text into Photoshop templates. This app, on the other hand, allows them to do so in a few clicks. HTML canvas is used to draw images and texts, allowing users to directly download pictures from the website.',
         techStack: ['React', 'Node', 'Chakra UI', 'Canvas'],
         liveView: 'https://dentis.netlify.app/',
