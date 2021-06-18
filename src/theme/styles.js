@@ -45,6 +45,14 @@ const styles = {
                 bg: { xs: mode('light.bg', 'dark.bg')(props), lg: mode('light.bgLighter', 'dark.bgLighter')(props) },
                 borderRadius: '0'
             },
+            '::selection': {
+                bg: mode('dark.bg', 'light.bg')(props),
+                color: mode('light.bg', 'dark.bg')(props),
+            },
+            '::-moz-selection': {
+                bg: mode('dark.bg', 'light.bg')(props),
+                color: mode('light.bg', 'dark.bg')(props),
+            },
             '.chakra-button__icon': {
                 fontSize: '22px'
             },
