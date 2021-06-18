@@ -45,14 +45,14 @@ const SectionHome = () => {
                 </Box>
                 <Heading zIndex='5' pos='relative' as={motion.h2} variants={staggerHero.item} fontSize={{ xs: '22px', sm: '24px', xl: '30px' }}>
                     Hi, I'm Stepan Pavlov
-                    </Heading>
+                </Heading>
                 <Heading zIndex='5' pos='relative' as={motion.h1} variants={staggerHero.item} fontSize={{ xs: '64px', sm: '74px', xl: '90px' }} lineHeight={{ xs: '105%', sm: '95%' }} color={color} mb='40px'>
                     I create things for the web
-                    </Heading>
+                </Heading>
                 <Text zIndex='5' pos='relative' as={motion.p} variants={staggerHero.item} fontWeight='medium' fontSize='18px' lineHeight='150%' maxW='400px' mb='40px'>
                     I'm a Russian Software Developer based in Kuala Lumpur, Malaysia, passionate about building and designing high-quality websites and applications.
                 </Text>
-                <Wrap zIndex='5' pos='relative' as={motion.div} variants={staggerHero.item} maxW='200px' spacing={6}>
+                <Wrap userSelect='none' zIndex='5' pos='relative' as={motion.div} variants={staggerHero.item} maxW='200px' spacing={6}>
                     <WrapItem w='full'>
                         <Button
                             w='full'
@@ -63,12 +63,12 @@ const SectionHome = () => {
                             smooth={true}
                             duration={1500}>
                             View My Projects
-                    </Button>
+                        </Button>
                     </WrapItem>
                     <WrapItem w='full'>
                         <Button as={Link} href={CVLink} isExternal={true} variant='secondary' w='full'>
                             Download My CV
-                    </Button>
+                        </Button>
                     </WrapItem>
                 </Wrap>
             </Box>

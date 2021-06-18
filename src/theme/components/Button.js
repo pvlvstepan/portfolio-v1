@@ -3,6 +3,7 @@ import { mode, darken, lighten } from '@chakra-ui/theme-tools';
 const Button = {
     baseStyle: {
         textDecoration: 'none !important',
+        userSelect: 'none',
         fontWeight: "bold",
         textTransform: "uppercase",
         letterSpacing: 'wide',
