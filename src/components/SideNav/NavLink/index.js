@@ -51,7 +51,7 @@ const NavLink = ({ text, to, type, offset, setNavIsOpen, title }) => {
     return (
         <Link
             aria-label={'Link to ' + title}
-            title={'Link to ' + title}
+            title={type !== 'menuLink' && type !== 'title' ? ('Link to ' + title) : undefined}
             href={to}
             rounded='xl'
             isExternal={type === 'socialLink' ? true : false}
