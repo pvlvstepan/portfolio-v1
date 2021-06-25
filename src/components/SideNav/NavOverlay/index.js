@@ -19,6 +19,7 @@ const NavOverlay = ({ visibility, setNavIsOpen }) => {
             onClick={() => setNavIsOpen(false)}
             onTouchStart={() => setNavIsOpen(false)}
             opacity={visibility === 'visible' ? 1 : 0}
+            pointerEvents={visibility === 'visible' ? 'all' : 'none'}
             transition='.25s ease-in-out'
             visibility={visibility}>
         </Box>
