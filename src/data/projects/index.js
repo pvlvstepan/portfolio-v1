@@ -1,6 +1,7 @@
 import covidTracker from './img/covidTracker.png';
 import movieLister from './img/movieLister.png';
 import dentisGenerator from './img/dentisGenerator.png';
+import { ParagraphLink } from '../../components/TextElements';
 
 const projectsData = [
     {
@@ -14,7 +15,7 @@ const projectsData = [
     {
         title: 'MovieLister',
         img: movieLister,
-        description: "MovieLister is a single page application that I've developed during a coding interview at Bigdata MSU. The app features movies that are being pulled from YTS.mx API and displays them in a neatly designed pages on the website.",
+        description: <>MovieLister is a single page application that I've developed during a coding interview at <ParagraphLink text='BigData MSU' to='https://bigdata.msu.ru/' />. The app features movies that are being pulled from <ParagraphLink text='YTS.mx' to='https://yts.mx/api' /> API and displays them in a neatly designed pages on the website.</>,
         techStack: ['React', 'Axios', 'Node', 'Chakra UI', 'React Router'],
         liveView: 'https://react-movie-lister.netlify.app/',
         github: 'https://github.com/pvlvstepan/movie-lister'
