@@ -27,7 +27,7 @@ const SectionAbout = () => {
         >
             <SectionTitle text="About Me" />
             <SectionDescription text="I'm a highly motivated software developer eager to learn more and grow professionally." />
-            <SectionParagraph
+            {/* <SectionParagraph
                 text={
                     <>
                         I'm currently a student at the{" "}
@@ -36,11 +36,10 @@ const SectionAbout = () => {
                             to="https://new.apu.edu.my/about-apu"
                         />{" "}
                         pursuing a <span>Software Engineering Diploma</span> in
-                        my second year. I prefer to keep learning, continue
-                        challenging myself and do exciting things that matter.
+                        my second year.
                     </>
                 }
-            />
+            /> */}
             <AspectRatio
                 as={motion.div}
                 ref={imageRef}
@@ -61,13 +60,14 @@ const SectionAbout = () => {
             <SectionParagraph
                 text={
                     <>
-                        Fueled by enthusiasm, I enjoy and am more than willing
-                        to bridge the gap between back-end and front-end
-                        development — combining my technical knowledge with my
-                        keen eye for design to create a{" "}
-                        <span>beautiful product</span>. My passion drives me in
-                        the pursuit of many interests and areas of study. I'd
-                        like to{" "}
+                        I prefer to keep learning, continue challenging myself
+                        and do exciting things that matter. Fueled by
+                        enthusiasm, I enjoy and am more than willing to bridge
+                        the gap between back-end and front-end development —
+                        combining my technical knowledge with my keen eye for
+                        design to create a <span>beautiful product</span>. My
+                        passion drives me in the pursuit of many interests and
+                        areas of study. I'd like to{" "}
                         <span>
                             develop expertise in several software engineering
                             fields
