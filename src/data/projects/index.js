@@ -3,7 +3,6 @@ import movieLister from "./img/movieLister.png";
 import dentisGenerator from "./img/dentisGenerator.png";
 import bigdata from "./img/bigdata.png";
 import report from "./img/report.png";
-import mipt from "./img/mipt.png";
 import codd from "./img/codd.png";
 import automl from "./img/automl.png";
 
@@ -17,14 +16,6 @@ const projectsData = [
             "Ecology Report is an interactive version of Ecological Report 2020 for Ministry of Natural Resources and Environment of the Russian Federation. Delivered frontend part of the application with complex routing and API integration.",
         techStack: ["React", "Chart.JS", "Leaflet", "React Router", "SCSS"],
         liveView: "https://2020.ecology-gosdoklad.ru/",
-    },
-    {
-        title: "MIPT Business School",
-        img: mipt,
-        description:
-            "MIPT Business School is a project for the Moscow Institute of Physics and Technology. Contributed to responsive website layout as well as styling of the website sections. Implemented GSAP for content animations.",
-        techStack: ["React", "GSAP", "React Router", "SCSS", "REST"],
-        liveView: "https://bs.mipt.ru/master",
     },
     {
         title: "CODD Damage Detector",
