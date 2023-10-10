@@ -1,13 +1,5 @@
-<h1  align='center'>
-stepanpavlov.com
-</h1>
 <p align="center">
 This is a place where everything about me, my projects and skills can be found. This website isn't just my portfolio, but also a personal project in and of itself. I think I've grown quite a bit as a developer & engineer, so I wanted to create something to showcase some of what I've learned and done.
-</p>
-<p align="center">
-  <a href="https://app.netlify.com/sites/stepanpavlov/deploys" target="_blank">
-    <img src="https://api.netlify.com/api/v1/badges/a4ae8731-2598-47be-9104-a927f0e7af8d/deploy-status" alt="Netlify Status" />
-  </a>
 </p>
 
 ![demo](https://i.imgur.com/Ipq2kGT.png)
