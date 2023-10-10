@@ -1,8 +1,6 @@
-<p align="center">
-This is a place where everything about me, my projects and skills can be found. This website isn't just my portfolio, but also a personal project in and of itself. I think I've grown quite a bit as a developer & engineer, so I wanted to create something to showcase some of what I've learned and done.
-</p>
-
 ![demo](https://i.imgur.com/Ipq2kGT.png)
+
+This is a place where everything about me, my projects and skills can be found. This website isn't just my portfolio, but also a personal project in and of itself. I think I've grown quite a bit as a developer & engineer, so I wanted to create something to showcase some of what I've learned and done.
 
 ## What I've used to build it
 
