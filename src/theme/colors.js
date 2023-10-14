@@ -1,23 +1,23 @@
 const colors = {
+  light: {
+    accent: "#0A68FF",
+    bg: "#E5E5E5",
+    bgLighter: "#FAFAFA",
+    primary: "#222222",
+    secondary: "#3E3E3E",
+    bgGradient:
+      "linear-gradient(to right, #E5E5E5 0%, #E5E5E5 60%, #FAFAFA 60%)",
+  },
 
-    light: {
-        accent: '#0A68FF',
-        bg: '#E5E5E5',
-        bgLighter: '#FAFAFA',
-        primary: '#222222',
-        secondary: '#3E3E3E',
-        bgGradient: 'linear-gradient(to right, #E5E5E5 0%, #E5E5E5 60%, #FAFAFA 60%)'
-    },
-
-    dark: {
-        accent: '#3A86FF',
-        bg: '#222222',
-        bgLighter: '#383838',
-        primary: '#FFFFFF',
-        secondary: '#BBBBBB',
-        bgGradient: 'linear-gradient(to right, #222222 0%, #222222 60%, #383838 60%)'
-    }
-
+  dark: {
+    accent: "#3A86FF",
+    bg: "#222222",
+    bgLighter: "#383838",
+    primary: "#FFFFFF",
+    secondary: "#BBBBBB",
+    bgGradient:
+      "linear-gradient(to right, #222222 0%, #222222 60%, #383838 60%)",
+  },
 };
 
 export default colors;
