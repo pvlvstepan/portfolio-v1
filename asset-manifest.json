@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.js": "/static/js/main.a28e6afa.chunk.js",
+    "main.js.map": "/static/js/main.a28e6afa.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.27c1d118.js",
+    "runtime-main.js.map": "/static/js/runtime-main.27c1d118.js.map",
+    "static/css/2.731674af.chunk.css": "/static/css/2.731674af.chunk.css",
+    "static/js/2.e0bff9d7.chunk.js": "/static/js/2.e0bff9d7.chunk.js",
+    "static/js/2.e0bff9d7.chunk.js.map": "/static/js/2.e0bff9d7.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.731674af.chunk.css.map": "/static/css/2.731674af.chunk.css.map",
+    "static/js/2.e0bff9d7.chunk.js.LICENSE.txt": "/static/js/2.e0bff9d7.chunk.js.LICENSE.txt",
+    "static/media/automl.4829b638.png": "/static/media/automl.4829b638.png",
+    "static/media/bigdata.6465dd87.png": "/static/media/bigdata.6465dd87.png",
+    "static/media/codd.b4983b49.png": "/static/media/codd.b4983b49.png",
+    "static/media/covidTracker.b3293092.png": "/static/media/covidTracker.b3293092.png",
+    "static/media/dentisGenerator.6cc78d60.png": "/static/media/dentisGenerator.6cc78d60.png",
+    "static/media/heroIMG.be3f8077.png": "/static/media/heroIMG.be3f8077.png",
+    "static/media/heroIMGlight.ebc9037c.png": "/static/media/heroIMGlight.ebc9037c.png",
+    "static/media/imgAbout.741cd82a.jpg": "/static/media/imgAbout.741cd82a.jpg",
+    "static/media/500.css": "/static/media/montserrat-vietnamese-500-normal.0f3d20ba.woff2",
+    "static/media/600.css": "/static/media/montserrat-vietnamese-600-normal.702a2b92.woff2",
+    "static/media/700.css": "/static/media/montserrat-vietnamese-700-normal.810d24ff.woff2",
+    "static/media/movieLister.8a74241a.png": "/static/media/movieLister.8a74241a.png",
+    "static/media/report.aacd0b10.png": "/static/media/report.aacd0b10.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.27c1d118.js",
+    "static/css/2.731674af.chunk.css",
+    "static/js/2.e0bff9d7.chunk.js",
+    "static/js/main.a28e6afa.chunk.js"
+  ]
+}
